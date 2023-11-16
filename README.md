@@ -30,6 +30,11 @@ Fig. 3 (a), Fig. 3 (b), Fig. 3 (c) and Fig. 3 (d) show the performance of the mE
 
 The kernels mELMs are successful because they can model any decision boundary. They do not follow conventional geometric surfaces like ellipses and hyperbolas. The mELMs kernels map the decision boundary in _n_-dimensional. The coordinates are based on training samples. _n_ represents the number of extracted features. mELMs can detect and model different classes by using Mathematical Morphology. It detects the shapes of bodies in images.
 
+## Follow the instructions:
+
+-	software with a graphical interface (GUI);
+-	software with a graphical interface (GUI);
+-	software with a graphical interface (GUI);
 
 
 
