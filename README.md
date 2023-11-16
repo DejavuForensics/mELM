@@ -1,4 +1,4 @@
-# MELM
+# mELM
 Morphological Extreme Learning Machine
 
 Neural network is a computational intelligence model employed to solve pattern recognition problems. Neural networks can generalize and recognize new data that wasn't taught during training. In backpropagation strategy, adjusting many parameters is necessary to improve neural network performance. 
@@ -17,6 +17,19 @@ The decision frontier of a neural network can be seen as an _n_-dimensional imag
 Mathematical Morphology is a theory used in digital image processing to process nonlinearly. Various applications like object detection, segmentation, and feature extraction use Mathematical Morphology. Morphology is based on shape transformations that preserve the inclusion relationships of objects. There are two fundamental morphological operations: Erosion and Dilation. Mathematical Morphology is a constructive theory. It builds operations on Erosions and Dilations.
 
 Fig. 1 (b) and Fig. (c) show the result of the Erosion and Dilation operation on the same original image: Fig. 1 (a). In the eroded image, the target object is "withered". In the dilated image, the target object is dilated, as the name suggests. The Dilation kernel expands the region connected to the target class. An analogy is drawn between image processing operations and authorial mELM networks. The Dilation kernel expands the region attached to the target class (e.g. malware). In turn, the Erosion kernel expands the region belonging to the counter-class (e.g. benign).
+
+One major difficulty in artificial neural networks is finding the best kernel for a specific task. ELM neural networks can solve a linearly separable problem using a Linear kernel, as seen in (Fig.). 2 (a). The Sigmoid, RBF, and Sinusoid kernels can solve problems that can be separated by Sigmoid, Radial, and Sinusoidal functions, as shown in Fig. 2 (b), Fig. 2 (c) and Fig. 2 (d), respectively.
+
+A neural network's ability to generalize well can depend on the right choice of kernel. The best kernel may be dependent on the problem to be solved. 
+To improve the results, consider studying various kernels for the neural network.
+Studying different kernel types is computationally expensive. It requires cross-validation and multiple random starting points. 
+
+To see a counter-example, look at how the Linear kernel is used with the Sigmoid and Sine distributions in Fig. 2 (a) and Fig. 2 (b), respectively. The classification accuracies shown in Fig. 2 (a) and Fig. 2 (b) are 78.71% and 73.00%, respectively. The Linear kernel doesn't clearly show the decision boundaries of Sigmoid and Sinusoid distributions.
+
+Fig. 3 (a), Fig. 3 (b), Fig. 3 (c) and Fig. 3 (d) show the performance of the mELM Erosion kernel on the Linear, Sigmoid, Radial and Sinusoid distributions. The respective accuracies are 100%, 93.07%, 98.18% and 99.50%.  Fig. 4(a), Fig. 4 (b), Fig. 4 (c) and Fig. 4 (d) show the performance of the mELM Dilation kernel on the Linear, Sigmoidal, Radial and Sinusoidal distributions. The respective accuracies of 100%, 95.05%, 98.18% and 99.50%. We can see that the mELMs accurately map various distributions for different problems. It should be noted that the two attributes are normalized to the same lower and upper limit.
+
+The kernels mELMs are successful because they can model any decision boundary. They do not follow conventional geometric surfaces like ellipses and hyperbolas. The mELMs kernels map the decision boundary in _n_-dimensional. The coordinates are based on training samples. _n_ represents the number of extracted features. mELMs can detect and model different classes by using Mathematical Morphology. It detects the shapes of bodies in images.
+
 
 
 
