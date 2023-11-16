@@ -35,6 +35,9 @@ The kernels mELMs are successful because they can model any decision boundary. T
 -	software with a graphical interface (GUI);
 -	software with a graphical interface (GUI);
 -	software with a graphical interface (GUI);
+-	
+
+
 
 
 
