@@ -32,10 +32,10 @@ The kernels mELMs are successful because they can model any decision boundary. T
 
 ## Follow the instructions:
 
--	software with a graphical interface (GUI);
--	software with a graphical interface (GUI);
--	software with a graphical interface (GUI);
--	
+-	It is not within the scope of this package to create the database. A third party has already created the learning repository.
+-	In the path **dataset/classification/diabetes_train**, you can see the structure of the repository as shown in Fig. 5.
+-- **First column**: 1; the sample (row) belongs to the class. 0; the sample (row) belongs to the counter-class.
+
 
 
 
