@@ -35,7 +35,8 @@ The kernels mELMs are successful because they can model any decision boundary. T
 -	It is not within the scope of this package to create the database. A third party has already created the learning repository.
 -	In the path **dataset/classification/diabetes_train**, you can see the structure of the repository as shown in Fig. 5.
     - **First column**: 1; the sample (row) belongs to the class. 0; the sample (row) belongs to the counter-class.
-
+    - **Other columns**: input attributes (neurons) referring to features of the target application. In this diabetes_train, there are 8 input neurons. For example, in the first sample (row), the first neuron has a value of 0.11764700.
+- At the end of learning (training), the ELM neural network will be capable of generalization. The ELM will classify the unseen sample as either class (1.0) or counter-class (0.0).An unpublished sample refers to a sample not presented during training.
 
 
 
