@@ -1,6 +1,57 @@
 # mELM
 Morphological Extreme Learning Machine
 
+# Usage in distinct antiviruses
+
+## Antivirus for Citadel _malware_
+
+python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tall [Antivirus_Dataset_PE32_Citadel_mELM_format.csv](https://github.com/DejavuForensics/Citadel/blob/main/Antivirus_Dataset_PE32_Citadel_mELM_format.csv) 
+-ty 1 -nh 500 -af dilation -v
+
+```
+Carlos Henrique Macedo dos Santos, Sidney Marlon Lopes de Lima.
+Artificial Intelligence-Driven Antivirus in Pattern Identification of Citadel Malware.
+```
+
+## Antivirus for Java apps
+
+python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tall [Antivirus_Dataset_Jar_mELM_format.csv](https://github.com/DejavuForensics/REJAFADA/blob/master/Antivirus_Dataset_Jar_mELM_format.zip) 
+-ty 1 -nh 500 -af dilation -v
+
+```
+Pinheiro, R.P., Lima, S.M.L., Souza, D.M. et al. 
+Antivirus applied to JAR malware detection based on runtime behaviors. 
+Scientific Reports - Nature Research 12, 1945 (2022). 
+https://doi.org/10.1038/s41598-022-05921-5
+```
+
+## Antivirus for PHP apps
+
+python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tall [Antivirus_Dataset_PHP_batch_1_mELM_format](https://github.com/DejavuForensics/PAEMAL/blob/master/Antivirus_Dataset_PHP_batch_1_mELM_format.csv) 
+-ty 1 -nh 500 -af dilation -v
+
+```
+Lima, S.M.L., Silva, S.H.M.T., Pinheiro, R.P. et al.
+Next-generation antivirus endowed with web-server Sandbox applied to audit fileless attack.
+Soft Comput 27, 1471–1491 (2023).
+https://doi.org/10.1007/s00500-022-07447-4
+```
+
+## Antivirus for JavaScript apps
+
+python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tall [Antivirus_Dataset_JavaScript_mELM_format.csv](
+https://github.com/DejavuForensics/MARADJS/blob/master/Antivirus_Dataset_JavaScript_mELM_format.zip) 
+-ty 1 -nh 500 -af dilation -v
+
+```
+de Lima, S.M.L., Souza, D.M., Pinheiro, R.P. et al. 
+Next-generation antivirus for JavaScript malware detection based on dynamic features. 
+Knowl Inf Syst (2023). 
+https://doi.org/10.1007/s10115-023-01978-4
+```
+
+## Introduction
+
 Neural network is a computational intelligence model employed to solve pattern recognition problems. Neural networks can generalize and recognize new data that wasn't taught during training. In backpropagation strategy, adjusting many parameters is necessary to improve neural network performance. 
 The neural network usually gets stuck in local minima. To eliminate these areas, control strategies are added to these networks. The network needs a lot of training time to classify the samples. The latest neural networks are accurate, but training can take many days to complete.
 
@@ -64,60 +115,4 @@ No console, use a rede neural extrema. Segue um exemplo:
     -ts dataset/classification/diabetes_test -ty 1 -nh 100 
     -af dilation -v
 \end{verbatim}
-
-
-
-
-# Usage in distinct antiviruses
-
-## Antivirus for Citadel _malware_
-
-python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tall [Antivirus_Dataset_PE32_Citadel_mELM_format.csv](https://github.com/DejavuForensics/Citadel/blob/main/Antivirus_Dataset_PE32_Citadel_mELM_format.csv) 
--ty 1 -nh 500 -af dilation -v
-
-```
-Carlos Henrique Macedo dos Santos, Sidney Marlon Lopes de Lima.
-Artificial Intelligence-Driven Antivirus in Pattern Identification of Citadel Malware.
-```
-
-## Antivirus for Java apps
-
-python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tall [Antivirus_Dataset_Jar_mELM_format.csv](https://github.com/DejavuForensics/REJAFADA/blob/master/Antivirus_Dataset_Jar_mELM_format.zip) 
--ty 1 -nh 500 -af dilation -v
-
-```
-Pinheiro, R.P., Lima, S.M.L., Souza, D.M. et al. 
-Antivirus applied to JAR malware detection based on runtime behaviors. 
-Scientific Reports - Nature Research 12, 1945 (2022). 
-https://doi.org/10.1038/s41598-022-05921-5
-```
-
-## Antivirus for PHP apps
-
-python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tall [Antivirus_Dataset_PHP_batch_1_mELM_format](https://github.com/DejavuForensics/PAEMAL/blob/master/Antivirus_Dataset_PHP_batch_1_mELM_format.csv) 
--ty 1 -nh 500 -af dilation -v
-
-```
-Lima, S.M.L., Silva, S.H.M.T., Pinheiro, R.P. et al.
-Next-generation antivirus endowed with web-server Sandbox applied to audit fileless attack.
-Soft Comput 27, 1471–1491 (2023).
-https://doi.org/10.1007/s00500-022-07447-4
-```
-
-## Antivirus for JavaScript apps
-
-python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tall [Antivirus_Dataset_JavaScript_mELM_format.csv](
-https://github.com/DejavuForensics/MARADJS/blob/master/Antivirus_Dataset_JavaScript_mELM_format.zip) 
--ty 1 -nh 500 -af dilation -v
-
-```
-de Lima, S.M.L., Souza, D.M., Pinheiro, R.P. et al. 
-Next-generation antivirus for JavaScript malware detection based on dynamic features. 
-Knowl Inf Syst (2023). 
-https://doi.org/10.1007/s10115-023-01978-4
-```
-    
-
-
-
 
