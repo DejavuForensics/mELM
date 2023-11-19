@@ -75,19 +75,18 @@ No console, use a rede neural extrema. Segue um exemplo:
     Scientific Reports - Nature Research 12, 1945 (2022). 
     https://doi.org/10.1038/s41598-022-05921-5
 
-python melm.py -tr dataset/classification/diabetes_train 
--ts dataset/classification/diabetes_test -ty 1 -nh 100 
--af dilation -v
+    python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tall [dataset/classification/diabetes_train](https://github.com/DejavuForensics/REJAFADA/Antivirus_Dataset_Jar_mELM_format.zip) 
+    -ty 1 -nh 500 -af dilation -v
     
-[TrainingTime, TestingTime, TrainingAccuracy, TestingAccuracy] = ['MLP'](https://github.com/refade/Artificial-intelligence-based-antivirus-in-order-to-detect-malware-preventively/blob/main/MLP.m)(['Antivirus_Dataset_Jar.mat'](https://github.com/rewema/REJAFADA/blob/master/Antivirus_Dataset_Jar.mat), 1, 500, 'traincgb', 0)
-
-
     Sidney Lima, Sthéfano Silva, Ricardo Pinheiro et al. 
     Next-Generation Antivirus endowed with Web-Server SandBox Applied to Audit Fileless Attack, 
     23 February 2022, PREPRINT (Version 1) available at Research Square 
     https://doi.org/10.21203/rs.3.rs-390916/v1
 
-[TrainingTime, TestingTime, TrainingAccuracy, TestingAccuracy] = ['MLP'](https://github.com/refade/Artificial-intelligence-based-antivirus-in-order-to-detect-malware-preventively/blob/main/MLP.m)(['Antivirus_Dataset_PHP_batch_1.mat'](https://github.com/rewema/PAEMAL/blob/master/Antivirus_Dataset_PHP_batch_1.mat), 1, 500, 'traincgb', 0)
+python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tall [dataset/classification/diabetes_train](https://github.com/DejavuForensics/REJAFADA/Antivirus_Dataset_Jar_mELM_format.zip) 
+    -ty 1 -nh 500 -af dilation -v
+
+
     
 
 
