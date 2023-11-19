@@ -72,14 +72,12 @@ No console, use a rede neural extrema. Segue um exemplo:
 
 ## Antivirus for Citadel _malware_
 
-python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tall [Antivirus_Dataset_PHP_batch_1_mELM_format.csv](https://github.com/DejavuForensics/PAEMAL/blob/master/Antivirus_Dataset_PHP_batch_1_mELM_format.csv) 
+python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tall [Antivirus_Dataset_PE32_Citadel_mELM_format.csv](https://github.com/DejavuForensics/Citadel/blob/main/Antivirus_Dataset_PE32_Citadel_mELM_format.csv) 
 -ty 1 -nh 500 -af dilation -v
 
 ```
 Carlos Henrique Macedo dos Santos, Sidney Marlon Lopes de Lima.
-Artificial-intelligence-based antivirus specialized in Citadel malware pattern recognition.
-28 October 2022, PREPRINT (Version 2) available at Research Square.
-https://doi.org/10.21203/rs.3.rs-2052263/v2
+Artificial Intelligence-Driven Antivirus in Pattern Identification of Citadel Malware.
 ```
 
 ## Antivirus for Java apps
