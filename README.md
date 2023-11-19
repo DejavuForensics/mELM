@@ -48,10 +48,46 @@ The kernels mELMs are successful because they can model any decision boundary. T
     - **Other columns**: input attributes (neurons) referring to features of the target application. In this diabetes_train, there are 430 input neurons. For example, in the first sample (row), the first neuron has a value of 0.
 - At the end of learning (training), the ELM neural network will be capable of generalization. The ELM will classify the unseen sample as either class (1.0) or counter-class (0.0). An unseen sample refers to a sample not presented during training.
 
+### Parameters of the extreme learning machine:
+
+-    tr: repositório de aprendizado estatístico reversado à fase de treino.
+-    ts: repositório de aprendizado estatístico reversado à fase de teste.
+-    tall: repositório de aprendizado estatístico reversado à fase de teste.
+-ty:
+    - 1: classificação (reconhecimento de padrão). 
+    - 0: regressão (predição: previsão com rigor científico-metodológico).
+ -nh: quantidade de neurônios na camada escondida.
+ -af: função de ativação.
+No console, use a rede neural extrema. Segue um exemplo:
+\begin{verbatim}
+    python melm.py -tr dataset/classification/diabetes_train 
+    -ts dataset/classification/diabetes_test -ty 1 -nh 100 
+    -af dilation -v
+\end{verbatim}
 
 
 
 
+# Usage in distinct antiviruses
 
+    Pinheiro, R.P., Lima, S.M.L., Souza, D.M. et al. 
+    Antivirus applied to JAR malware detection based on runtime behaviors. 
+    Scientific Reports - Nature Research 12, 1945 (2022). 
+    https://doi.org/10.1038/s41598-022-05921-5
+
+python melm.py -tr dataset/classification/diabetes_train 
+-ts dataset/classification/diabetes_test -ty 1 -nh 100 
+-af dilation -v
+    
+[TrainingTime, TestingTime, TrainingAccuracy, TestingAccuracy] = ['MLP'](https://github.com/refade/Artificial-intelligence-based-antivirus-in-order-to-detect-malware-preventively/blob/main/MLP.m)(['Antivirus_Dataset_Jar.mat'](https://github.com/rewema/REJAFADA/blob/master/Antivirus_Dataset_Jar.mat), 1, 500, 'traincgb', 0)
+
+
+    Sidney Lima, Sthéfano Silva, Ricardo Pinheiro et al. 
+    Next-Generation Antivirus endowed with Web-Server SandBox Applied to Audit Fileless Attack, 
+    23 February 2022, PREPRINT (Version 1) available at Research Square 
+    https://doi.org/10.21203/rs.3.rs-390916/v1
+
+[TrainingTime, TestingTime, TrainingAccuracy, TestingAccuracy] = ['MLP'](https://github.com/refade/Artificial-intelligence-based-antivirus-in-order-to-detect-malware-preventively/blob/main/MLP.m)(['Antivirus_Dataset_PHP_batch_1.mat'](https://github.com/rewema/PAEMAL/blob/master/Antivirus_Dataset_PHP_batch_1.mat), 1, 500, 'traincgb', 0)
+    
 
 
