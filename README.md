@@ -104,12 +104,12 @@ The kernels mELMs are successful because they can model any decision boundary. T
 -    tr: learning repository reversed to the training phase.
 -    ts: learning repository reversed to the testing phase.
 -    tall: learning repository, this includes the training and testing phase.
--ty:
-    - 1: classification (pattern recognition). 
-    - 0: regression (prediction: prediction with scientific-methodological rigor).
--nh: number of neurons in the hidden layer.
--af: activation function.
-    - In the console, use the extreme neural network. Here's an example:
+-    ty:
+    -    1: classification (pattern recognition). 
+    -    0: regression (prediction: prediction with scientific-methodological rigor).
+-    nh: number of neurons in the hidden layer.
+-    af: activation function.
+-     In the console, use the extreme neural network. Here's an example:
 
         python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tr [dataset/classification/diabetes_train](https://github.com/DejavuForensics/mELM/blob/main/dataset/classification/diabetes_train)
         -ts [dataset/classification/diabetes_test](https://github.com/DejavuForensics/mELM/blob/main/dataset/classification/diabetes_test)
