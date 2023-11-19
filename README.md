@@ -111,8 +111,8 @@ The kernels mELMs are successful because they can model any decision boundary. T
  -af: activation function.
   -In the console, use the extreme neural network. Here's an example:
 
-python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tr [dataset/classification/diabetes_train](https://github.com/DejavuForensics/Citadel/blob/main/)
--ts [dataset/classification/diabetes_test]((https://github.com/DejavuForensics/Citadel/blob/main/
--ty 1 -nh 500 -af dilation -v
+        python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tr [dataset/classification/diabetes_train](https://github.com/DejavuForensics/Citadel/blob/main/)
+        -ts [dataset/classification/diabetes_test]((https://github.com/DejavuForensics/Citadel/blob/main/
+        -ty 1 -nh 500 -af dilation -v
 
 
