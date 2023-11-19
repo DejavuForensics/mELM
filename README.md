@@ -101,18 +101,18 @@ The kernels mELMs are successful because they can model any decision boundary. T
 
 ### Parameters of the extreme learning machine:
 
--    tr: repositório de aprendizado estatístico reversado à fase de treino.
--    ts: repositório de aprendizado estatístico reversado à fase de teste.
--    tall: repositório de aprendizado estatístico reversado à fase de teste.
+-    tr: learning repository reversed to the training phase.
+-    ts: learning repository reversed to the testing phase.
+-    tall: learning repository, this includes the training and testing phase.
 -ty:
-    - 1: classificação (reconhecimento de padrão). 
-    - 0: regressão (predição: previsão com rigor científico-metodológico).
- -nh: quantidade de neurônios na camada escondida.
- -af: função de ativação.
-No console, use a rede neural extrema. Segue um exemplo:
-\begin{verbatim}
-    python melm.py -tr dataset/classification/diabetes_train 
-    -ts dataset/classification/diabetes_test -ty 1 -nh 100 
-    -af dilation -v
-\end{verbatim}
+    - 1: classification (pattern recognition). 
+    - 0: regression (prediction: prediction with scientific-methodological rigor).
+ -nh: number of neurons in the hidden layer.
+ -af: activation function.
+  -In the console, use the extreme neural network. Here's an example:
+
+python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tr [dataset/classification/diabetes_train](https://github.com/DejavuForensics/Citadel/blob/main/)
+-ts [dataset/classification/diabetes_test]((https://github.com/DejavuForensics/Citadel/blob/main/
+-ty 1 -nh 500 -af dilation -v
+
 
