@@ -70,25 +70,41 @@ No console, use a rede neural extrema. Segue um exemplo:
 
 # Usage in distinct antiviruses
 
-```
+>
 Pinheiro, R.P., Lima, S.M.L., Souza, D.M. et al. 
 Antivirus applied to JAR malware detection based on runtime behaviors. 
 Scientific Reports - Nature Research 12, 1945 (2022). 
 https://doi.org/10.1038/s41598-022-05921-5
+
+```
+python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tall [Antivirus_Dataset_Jar_mELM_format.csv](https://github.com/DejavuForensics/REJAFADA/blob/master/Antivirus_Dataset_Jar_mELM_format.zip) 
+-ty 1 -nh 500 -af dilation -v
 ```
 
-    python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tall [dataset/classification/diabetes_train](https://github.com/DejavuForensics/REJAFADA/Antivirus_Dataset_Jar_mELM_format.zip) 
-    -ty 1 -nh 500 -af dilation -v
-    
-    Sidney Lima, Sthéfano Silva, Ricardo Pinheiro et al. 
-    Next-Generation Antivirus endowed with Web-Server SandBox Applied to Audit Fileless Attack, 
-    23 February 2022, PREPRINT (Version 1) available at Research Square 
-    https://doi.org/10.21203/rs.3.rs-390916/v1
+```
+Sidney Lima, Sthéfano Silva, Ricardo Pinheiro et al. 
+Next-Generation Antivirus endowed with Web-Server SandBox Applied to Audit Fileless Attack.
+Soft Comput 27, 1471–1491 (2023). https://doi.org/10.1007/s00500-022-07447-4
+23 February 2022, PREPRINT (Version 1) available at Research Square 
+https://doi.org/10.21203/rs.3.rs-390916/v1
+```
 
+```
 python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tall [dataset/classification/diabetes_train](https://github.com/DejavuForensics/REJAFADA/Antivirus_Dataset_Jar_mELM_format.zip) 
-    -ty 1 -nh 500 -af dilation -v
+-ty 1 -nh 500 -af dilation -v
+```
 
-
+```
+de Lima, S.M.L., Souza, D.M., Pinheiro, R.P. et al. 
+Next-generation antivirus for JavaScript malware detection based on dynamic features. 
+Knowl Inf Syst (2023). 
+https://doi.org/10.1007/s10115-023-01978-4
+```
     
+```
+python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tall [Antivirus_Dataset_JavaScript_mELM_format.csv](
+https://github.com/DejavuForensics/MARADJS/blob/master/Antivirus_Dataset_JavaScript_mELM_format.zip) 
+-ty 1 -nh 500 -af dilation -v
+```
 
 
