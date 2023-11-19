@@ -70,6 +70,17 @@ No console, use a rede neural extrema. Segue um exemplo:
 
 # Usage in distinct antiviruses
 
+## Antivirus for Citadel _malware_
+
+python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tall [Antivirus_Dataset_PHP_batch_1_mELM_format.csv](https://github.com/DejavuForensics/PAEMAL/blob/master/Antivirus_Dataset_PHP_batch_1_mELM_format.csv) 
+-ty 1 -nh 500 -af dilation -v
+
+```
+Carlos Henrique Macedo dos Santos, Sidney Marlon Lopes de Lima.
+Artificial-intelligence-based antivirus specialized in Citadel malware pattern recognition.
+28 October 2022, PREPRINT (Version 2) available at Research Square.
+https://doi.org/10.21203/rs.3.rs-2052263/v2
+```
 
 ## Antivirus for Java apps
 
@@ -89,11 +100,10 @@ python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tall [dataset
 -ty 1 -nh 500 -af dilation -v
 
 ```
-Sidney Lima, Sthéfano Silva, Ricardo Pinheiro et al. 
-Next-Generation Antivirus endowed with Web-Server SandBox Applied to Audit Fileless Attack.
-Soft Comput 27, 1471–1491 (2023). https://doi.org/10.1007/s00500-022-07447-4
-23 February 2022, PREPRINT (Version 1) available at Research Square 
-https://doi.org/10.21203/rs.3.rs-390916/v1
+Lima, S.M.L., Silva, S.H.M.T., Pinheiro, R.P. et al.
+Next-generation antivirus endowed with web-server Sandbox applied to audit fileless attack.
+Soft Comput 27, 1471–1491 (2023).
+https://doi.org/10.1007/s00500-022-07447-4
 ```
 
 ## Antivirus for JavaScript apps
@@ -109,14 +119,7 @@ Knowl Inf Syst (2023).
 https://doi.org/10.1007/s10115-023-01978-4
 ```
     
-## Antivirus for Citadel _malware_
 
-python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tall [Antivirus_Dataset_PHP_batch_1_mELM_format.csv](https://github.com/DejavuForensics/PAEMAL/blob/master/Antivirus_Dataset_PHP_batch_1_mELM_format.csv) 
--ty 1 -nh 500 -af dilation -v
-
-```
-Carlos Henrique Macedo dos Santos, Sidney Marlon Lopes de Lima. Artificial-intelligence-based antivirus specialized in Citadel malware pattern recognition, 28 October 2022, PREPRINT (Version 2) available at Research Square [https://doi.org/10.21203/rs.3.rs-2052263/v2]
-```
 
 
 
