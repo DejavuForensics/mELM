@@ -101,7 +101,7 @@ The kernels mELMs are successful because they can model any decision boundary. T
 
 ### Parameters of the extreme learning machine:
 
--    tr: learning repository reversed to the training phase.
+-    -tr: learning repository reversed to the training phase.
 -    ts: learning repository reversed to the testing phase.
 -    tall: learning repository, this includes the training and testing phase.
 -    ty:
