@@ -111,10 +111,12 @@ The kernels mELMs are successful because they can model any decision boundary. T
 -    -af: activation function.
 -    -sd: random number generator seed.
 -    -v: verbose output.
--    In the console, use the extreme neural network. Here's an example:
-
-        python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tr [dataset/classification/diabetes_train](https://github.com/DejavuForensics/mELM/blob/main/dataset/classification/diabetes_train)
-        -ts [dataset/classification/diabetes_test](https://github.com/DejavuForensics/mELM/blob/main/dataset/classification/diabetes_test)
-        -ty 1 -nh 500 -af dilation -v
-
+-    In the console, use the extreme neural network in didatic repository. Here's an example:
+```
+        python melm.py -tr dataset/classification/diabetes_train -ts dataset/classification/diabetes_test -ty 1 -nh 500 -af dilation -v
+```
+-    In the console, use the extreme neural network in a real repository. Here's an example:
+```
+        python melm.py -tall dataset/classification/Antivirus_Dataset_PE32_Citadel_mELM_format.csv -ty 1 -nh 500 -af dilation -v
+```
 
