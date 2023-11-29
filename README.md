@@ -83,7 +83,7 @@ The kernels mELMs are successful because they can model any decision boundary. T
 
 ## Follow the instructions:
 
-### Classic repository for pattern recognition:
+### Didatic repository for pattern recognition:
 
 -	It is not within the scope of this package to create the database. A third party has already created the learning repository. This structure follows the methodology of the ELM inventors.
 -	In the path **dataset/classification/diabetes_train**, you can see the structure of the repository as shown in Fig. 5. 
