@@ -125,7 +125,7 @@ The kernels mELMs are successful because they can model any decision boundary. T
 -    -v: verbose output.
 -    In the console, use the extreme neural network in didactic repository. Here's an example:
 ```
-python melm.py -tr dataset/classification/diabetes_train -ts dataset/classification/diabetes_test -ty 1 -nh 500 -af dilation -v
+python melm.py -tr dataset/classification/diabetes_train -ts dataset/classification/diabetes_test -ty 1 -nh 100 -af dilation -v
 ```
 -    In the console, use the extreme neural network in a real repository. Here's an example:
 ```
