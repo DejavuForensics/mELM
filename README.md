@@ -120,3 +120,18 @@ python melm.py -tr dataset/classification/diabetes_train -ts dataset/classificat
 python melm.py -tall dataset/classification/Antivirus_Dataset_PE32_Citadel_mELM_format.csv -ty 1 -nh 500 -af dilation -v
 ```
 
+## Prediction
+
+When it comes to prediction, the neural network estimates a fractional value. By prediction, we mean a forecast with scientific-methodological rigor. To train the neural network, we show it a series of historical data over time. Example, the neural network examines the daily price of oil for the past few years. The output neuron receives the daily oil price. The input neurons receive the events during that time. Events refer to government decisions, elections, coup attempts, and natural phenomena like droughts.
+
+During training, neurons adjust their connections to prioritize periodic events. 
+Seemingly irrelevant daily events can affect the daily oil price.
+A person would not usually connect a small event to changes in oil prices. The neural network helps people link past events to current oil prices.
+
+Neural networks are helpful in predicting and preventing natural disasters. Neural networks can predict when a flood will happen, giving advanced warning. In synthesis, neural networks play a fundamental role in building smart city metamodels. Smart cities use electronic sensors to gather data and reduce the effects of natural disasters. 
+
+A avaliação do reconhecimento de padrões é diferente da previsão. No contexto do reconhecimento de padrões, a principal métrica é a precisão. Quanto mais próximo de 100%, melhor tende a ser o desempenho da rede neural nesse aplicativo específico. No cenário da previsão, a métrica crucial é a raiz do erro quadrático médio. Quanto mais próximo de 0, melhor será o desempenho da rede neural. O modelo tenta fazer previsões precisas reduzindo a diferença entre os resultados esperados e os reais.
+
+
+
+
