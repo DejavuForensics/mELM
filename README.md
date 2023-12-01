@@ -127,11 +127,24 @@ When it comes to prediction, the neural network estimates a fractional value. By
 During training, neurons adjust their connections to prioritize periodic events. 
 Seemingly irrelevant daily events can affect the daily oil price.
 A person would not usually connect a small event to changes in oil prices. The neural network helps people link past events to current oil prices.
-
 Neural networks are helpful in predicting and preventing natural disasters. Neural networks can predict when a flood will happen, giving advanced warning. In synthesis, neural networks play a fundamental role in building smart city metamodels. Smart cities use electronic sensors to gather data and reduce the effects of natural disasters. 
 
 A avaliação do reconhecimento de padrões é diferente da previsão. No contexto do reconhecimento de padrões, a principal métrica é a precisão. Quanto mais próximo de 100%, melhor tende a ser o desempenho da rede neural nesse aplicativo específico. No cenário da previsão, a métrica crucial é a raiz do erro quadrático médio. Quanto mais próximo de 0, melhor será o desempenho da rede neural. O modelo tenta fazer previsões precisas reduzindo a diferença entre os resultados esperados e os reais.
 
+## Follow the instructions:
+
+### Didatic repository for prediction:
+
+-	It is not within the scope of this package to create the database. A third party has already created the learning repository. This structure follows the methodology of the ELM inventors.
+-	In the path **dataset/dataset/regression/sinc_train**, you can see the structure of the repository as shown in Fig. 7. 
+    - **First column**: floating value to be estimated.
+    - **Second column**: input attribute (neuron). This is a didactic and hypothetical database. A real application could have hundreds of input neurons.
+- At the end of learning (training), the ELM neural network will be capable of prediction. The ELM will estimate a floating value from a given input neuron. 
+
+-    In the console, use the extreme neural network in didatic repository. Here's an example:
+```
+python melm.py -tr dataset/dataset/regression/sinc_train -ts dataset/dataset/regression/sinc_test -ty 1 -nh 500 -af dilation -v
+```
 
 
 
