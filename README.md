@@ -110,17 +110,17 @@ The kernels mELMs are successful because they can model any decision boundary. T
 -    -nh: number of neurons in the hidden layer.
 -    -af: activation function.
         - Kernel Linear (default): linear
-        - Kernel Sigmoid: sig or sigmoid
-        - Kernel Sine: sin or sine
-        - Kernel Hard Limit: hardlim
-        - Kernel Triangular Basis Transfer Function: tribas
-        - Kernel Radial Basis Function: radbas
         - Kernel mELM Dilation: dilation
         - Kernel mELM Erosion: erosion
         - Kernel Fuzzy-Erosion: fuzzy-erosion or fuzzy_erosion
         - Kernel Fuzzy-Dilation: fuzzy-dilation ou fuzzy\_dilation
         - Kernel Bitwise-Erosion: bitwise-erosion ou bitwise\_erosion
         - Kernel Bitwise-Dilation: bitwise-dilation ou bitwise\_dilation
+        - Kernel Sigmoid: sig or sigmoid
+        - Kernel Sine: sin or sine
+        - Kernel Hard Limit: hardlim
+        - Kernel Triangular Basis Transfer Function: tribas
+        - Kernel Radial Basis Function: radbas
 -    -sd: random number generator seed.
 -    -v: verbose output.
 -    In the console, use the extreme neural network in didactic repository. Here's an example:
