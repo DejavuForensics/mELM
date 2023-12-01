@@ -83,7 +83,7 @@ The kernels mELMs are successful because they can model any decision boundary. T
 
 ## Follow the instructions:
 
-### Didatic repository for pattern recognition:
+### didactic repository for pattern recognition:
 
 -	It is not within the scope of this package to create the database. A third party has already created the learning repository. This structure follows the methodology of the ELM inventors.
 -	In the path **dataset/classification/diabetes_train**, you can see the structure of the repository as shown in Fig. 5. 
@@ -111,7 +111,7 @@ The kernels mELMs are successful because they can model any decision boundary. T
 -    -af: activation function.
 -    -sd: random number generator seed.
 -    -v: verbose output.
--    In the console, use the extreme neural network in didatic repository. Here's an example:
+-    In the console, use the extreme neural network in didactic repository. Here's an example:
 ```
 python melm.py -tr dataset/classification/diabetes_train -ts dataset/classification/diabetes_test -ty 1 -nh 500 -af dilation -v
 ```
@@ -133,7 +133,7 @@ The evaluation of pattern recognition is different from prediction. In the conte
 
 ## Follow the instructions:
 
-### Didatic repository for prediction:
+### Didactic repository for prediction:
 
 -	It is not within the scope of this package to create the database. A third party has already created the learning repository. This structure follows the methodology of the ELM inventors.
 -	In the path **dataset/dataset/regression/sinc_train**, you can see the structure of the repository as shown in Fig. 7. 
