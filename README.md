@@ -129,7 +129,7 @@ Seemingly irrelevant daily events can affect the daily oil price.
 A person would not usually connect a small event to changes in oil prices. The neural network helps people link past events to current oil prices.
 Neural networks are helpful in predicting and preventing natural disasters. Neural networks can predict when a flood will happen, giving advanced warning. In synthesis, neural networks play a fundamental role in building smart city metamodels. Smart cities use electronic sensors to gather data and reduce the effects of natural disasters. 
 
-A avaliação do reconhecimento de padrões é diferente da previsão. No contexto do reconhecimento de padrões, a principal métrica é a precisão. Quanto mais próximo de 100%, melhor tende a ser o desempenho da rede neural nesse aplicativo específico. No cenário da previsão, a métrica crucial é a raiz do erro quadrático médio. Quanto mais próximo de 0, melhor será o desempenho da rede neural. O modelo tenta fazer previsões precisas reduzindo a diferença entre os resultados esperados e os reais.
+The evaluation of pattern recognition is different from prediction. In the context of pattern recognition, the main metric is accuracy. Neural networks perform better when closer to 100 percent in specific application. In the prediction scenario, the crucial metric is the root mean square error. The closer this is to 0, the better the performance of the neural network. The model aims to predict well by minimizing the gap between expected and actual outcomes.
 
 ## Follow the instructions:
 
@@ -142,7 +142,7 @@ A avaliação do reconhecimento de padrões é diferente da previsão. No contex
 -     At the end of learning (training), the ELM neural network will be capable of prediction. The ELM will estimate a floating value from a given input neuron. 
 -    The "mELM" package has a didactic dataset for prediction. It follows the methodology of the creators of ELM. However the authorial structure allows people to experiment with databases in real-world situations. These follow the structure shown in Figure \ref{fig:8_71}. In prediction problems, the second column must be a floating value. We only use classes in pattern recognition.
 -    You can use databases from [Kaggle](https://www.kaggle.com/) or [UCI](https://archive.ics.uci.edu/datasets). Search for repositories on their websites that specialize in predicting and analyzing time series.
--    In the console, use the extreme neural network in didatic repository. Here's an example:
+-    In the console, use the extreme neural network in didactic repository. Here's an example:
 ```
 python melm.py -tr dataset/dataset/regression/sinc_train -ts dataset/dataset/regression/sinc_test -ty 1 -nh 500 -af dilation -v
 ```
