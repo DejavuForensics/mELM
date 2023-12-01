@@ -139,8 +139,9 @@ A avaliação do reconhecimento de padrões é diferente da previsão. No contex
 -	In the path **dataset/dataset/regression/sinc_train**, you can see the structure of the repository as shown in Fig. 7. 
     - **First column**: floating value to be estimated.
     - **Second column**: input attribute (neuron). This is a didactic and hypothetical database. A real application could have hundreds of input neurons.
-- At the end of learning (training), the ELM neural network will be capable of prediction. The ELM will estimate a floating value from a given input neuron. 
-
+-     At the end of learning (training), the ELM neural network will be capable of prediction. The ELM will estimate a floating value from a given input neuron. 
+-    The "mELM" package has a didactic dataset for prediction. It follows the methodology of the creators of ELM. However the authorial structure allows people to experiment with databases in real-world situations. These follow the structure shown in Figure \ref{fig:8_71}. In prediction problems, the second column must be a floating value. We only use classes in pattern recognition.
+-    You can use databases from [Kaggle](https://www.kaggle.com/) or [UCI](https://archive.ics.uci.edu/datasets). Search for repositories on their websites that specialize in predicting and analyzing time series.
 -    In the console, use the extreme neural network in didatic repository. Here's an example:
 ```
 python melm.py -tr dataset/dataset/regression/sinc_train -ts dataset/dataset/regression/sinc_test -ty 1 -nh 500 -af dilation -v
