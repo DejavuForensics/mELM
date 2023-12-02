@@ -5,7 +5,7 @@ Morphological Extreme Learning Machine
 
 ## Antivirus for Citadel _malware_
 
-python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tall [Antivirus_Dataset_PE32_Citadel_mELM_format.csv](https://github.com/DejavuForensics/Citadel/blob/main/Antivirus_Dataset_PE32_Citadel_mELM_format.csv) 
+python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tall [Antivirus_Dataset_PE32_Citadel_mELM_format.csv](https://github.com/DejavuForensics/Citadel/blob/main/Antivirus_Dataset_PE32_Citadel_mELM_format.csv) 
 -ty 1 -nh 500 -af dilation -v
 
 ```
@@ -15,7 +15,7 @@ Artificial Intelligence-Driven Antivirus in Pattern Identification of Citadel Ma
 
 ## Antivirus for Java apps
 
-python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tall [Antivirus_Dataset_Jar_mELM_format.csv](https://github.com/DejavuForensics/REJAFADA/blob/master/Antivirus_Dataset_Jar_mELM_format.zip) 
+python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tall [Antivirus_Dataset_Jar_mELM_format.csv](https://github.com/DejavuForensics/REJAFADA/blob/master/Antivirus_Dataset_Jar_mELM_format.zip) 
 -ty 1 -nh 500 -af dilation -v
 
 ```
@@ -27,7 +27,7 @@ https://doi.org/10.1038/s41598-022-05921-5
 
 ## Antivirus for PHP apps
 
-python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tall [Antivirus_Dataset_PHP_batch_1_mELM_format](https://github.com/DejavuForensics/PAEMAL/blob/master/Antivirus_Dataset_PHP_batch_1_mELM_format.csv) 
+python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tall [Antivirus_Dataset_PHP_batch_1_mELM_format](https://github.com/DejavuForensics/PAEMAL/blob/master/Antivirus_Dataset_PHP_batch_1_mELM_format.csv) 
 -ty 1 -nh 500 -af dilation -v
 
 ```
@@ -39,7 +39,7 @@ https://doi.org/10.1007/s00500-022-07447-4
 
 ## Antivirus for JavaScript apps
 
-python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tall [Antivirus_Dataset_JavaScript_mELM_format.csv](
+python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tall [Antivirus_Dataset_JavaScript_mELM_format.csv](
 https://github.com/DejavuForensics/MARADJS/blob/master/Antivirus_Dataset_JavaScript_mELM_format.zip) 
 -ty 1 -nh 500 -af dilation -v
 
