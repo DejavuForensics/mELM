@@ -3,14 +3,26 @@ Morphological Extreme Learning Machine
 
 # Usage in distinct antiviruses
 
+## Antivirus for IoT _malware_ from SPARC architectures
+
+python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tall [/Antivirus_Dataset_IoT_SPARC_mELM_format.csv](https://github.com/DejavuForensics/IoT_SPARC/blob/main/Antivirus_Dataset_IoT_SPARC_mELM_format.csv) 
+-ty 1 -nh 500 -af dilation -v
+
+```
+Pinheiro Henriques de Araújo, I., Mariano Santiago de Abreu, L., Henrique Mendes Tavares Silva, S. et al. Antimalware applied to IoT malware detection based on softcore processor endowed with authorial sandbox. J Comput Virol Hack Tech (2024). https://doi.org/10.1007/s11416-024-00526-0
+```
+
 ## Antivirus for Citadel _malware_
 
 python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tall [Antivirus_Dataset_PE32_Citadel_mELM_format.csv](https://github.com/DejavuForensics/Citadel/blob/main/Antivirus_Dataset_PE32_Citadel_mELM_format.csv) 
 -ty 1 -nh 500 -af dilation -v
 
 ```
-Carlos Henrique Macedo dos Santos, Sidney Marlon Lopes de Lima.
-Artificial Intelligence-Driven Antivirus in Pattern Identification of Citadel Malware.
+Carlos Henrique Macedo dos Santos, Sidney Marlon Lopes de Lima,
+XAI-driven antivirus in pattern identification of citadel malware,
+Journal of Computational Science,
+82,102389 (2024).
+https://doi.org/10.1016/j.jocs.2024.102389.
 ```
 
 ## Antivirus for Java apps
