@@ -5,7 +5,7 @@ Morphological Extreme Learning Machine
 
 ## Antivirus for IoT _malware_ from SPARC architectures
 
-python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tall [/Antivirus_Dataset_IoT_SPARC_mELM_format.csv](https://github.com/DejavuForensics/IoT_SPARC/blob/main/Antivirus_Dataset_IoT_SPARC_mELM_format.csv) 
+python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tall [Antivirus_Dataset_IoT_SPARC_mELM_format.csv](https://github.com/DejavuForensics/IoT_SPARC/blob/main/Antivirus_Dataset_IoT_SPARC_mELM_format.csv) 
 -ty 1 -nh 500 -af dilation -v
 
 ```
