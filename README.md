@@ -9,7 +9,10 @@ python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py)
 -ty 1 -nh 500 -af dilation -v
 
 ```
-Pinheiro Henriques de Araújo, I., Mariano Santiago de Abreu, L., Henrique Mendes Tavares Silva, S. et al. Antimalware applied to IoT malware detection based on softcore processor endowed with authorial sandbox. J Comput Virol Hack Tech (2024). https://doi.org/10.1007/s11416-024-00526-0
+Pinheiro Henriques de Araújo, I., Mariano Santiago de Abreu, L., Henrique Mendes Tavares Silva, S. et al.
+Antimalware applied to IoT malware detection based on softcore processor endowed with authorial sandbox.
+ Journal of Computer Virology and Hacking Techniques (2024).
+https://doi.org/10.1007/s11416-024-00526-0
 ```
 
 ## Antivirus for Citadel _malware_
