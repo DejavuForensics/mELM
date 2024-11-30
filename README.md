@@ -1,7 +1,7 @@
 # mELM
 Morphological Extreme Learning Machine
 
-## ELM: K-fold
+## K-fold
 Cross-validation is a statistical technique. Researchers use it to assess the performance of a machine learning model. It divides the data set into parts, or ‘folds’. You can train and test the model many times on different data subsets. The aim is to ensure that the model generalises well to new and unseen data. The k-fold method is a type of cross-validation. In it, the data set is randomly split into k equal subsets (or folds). The k-fold involves the following steps:
 
 - **Data division**: the data set is divided into k approximately equal parts.
