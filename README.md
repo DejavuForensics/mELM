@@ -1,7 +1,18 @@
 # mELM
 Morphological Extreme Learning Machine
 
-### Follow the instructions:
+## ELM: K-fold
+Cross-validation is a statistical technique. Researchers use it to assess the performance of a machine learning model. It divides the data set into parts, or ‘folds’. You can train and test the model many times on different data subsets. The aim is to ensure that the model generalises well to new and unseen data. The k-fold method is a type of cross-validation. In it, the data set is randomly split into k equal subsets (or folds). The k-fold involves the following steps:
+
+- **Data division**: the data set is divided into k approximately equal parts.
+
+- **Training and testing**: for each of the k folds, the model is trained using k-1 folds and tested on the remaining fold.
+
+- **Repeating the process**: this process is repeated k times, each time with a different fold acting as the test set.
+
+- **Average and standard deviation of results**: performance metrics are calculated for each of the k runs. For each run, we calculate the average and standard deviation. We then average these metrics. This gives the model's final performance.
+- 
+### Follow the instruction:
 
 In the terminal, install _scikit-learn_.
 ```
