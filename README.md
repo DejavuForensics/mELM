@@ -11,7 +11,7 @@ Cross-validation is a statistical technique. Researchers use it to assess the pe
 - **Repeating the process**: this process is repeated k times, each time with a different fold acting as the test set.
 
 - **Average and standard deviation of results**: performance metrics are calculated for each of the k runs. For each run, we calculate the average and standard deviation. We then average these metrics. This gives the model's final performance.
-- 
+  
 ### Follow the instruction:
 
 In the terminal, install _scikit-learn_.
