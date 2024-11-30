@@ -1,6 +1,13 @@
 # mELM
 Morphological Extreme Learning Machine
 
+### Follow the instructions:
+
+In the terminal, install _scikit-learn_.
+```
+pip install scikit-learn
+```
+
 # Usage in distinct antiviruses
 
 ## Antivirus for IoT _malware_ from SPARC architectures
