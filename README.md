@@ -138,6 +138,11 @@ The kernels mELMs are successful because they can model any decision boundary. T
 -    -tr: learning repository reversed to the training phase.
 -    -ts: learning repository reversed to the testing phase.
 -    -tall: learning repository, this includes the training and testing phase.
+-    -kfold: refers to the use of the _k-fold_ method, which must be set to a non-null natural value. As discussed in the previous chapter, _k-fold_ trains the neural network in _k_ runs. In each run, we divide the data set. We use all samples in alternating phases for training and testing.
+-virusNorm: This config is useful for working with morphological _kernels_. They perform operations based on comparisons and set unions and intersections. For the morphological model to work, synapses between input and hidden neurons must match the sample interval. virusNorm is a normalization technique. It uses malware samples from the VirusShare database as a reference.
+[https://virusshare.com](https://virusshare.com).
+-sep: caractere ou padrão de expressão regular usado como delimitador do repositório de aprendizado estatístico. Por padrão, é utilizado um espaço como delimitador nos arquivos \textit{"TrainingData\_File"} e \textit{"TestingData\_File"}, e o caractere ponto e vírgula (;) para o arquivo \textit{"AllData\_File"}.
+
 -    -ty:
         -    1: classification (pattern recognition). 
         -    0: regression (prediction: prediction with scientific-methodological rigor).
