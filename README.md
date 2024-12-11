@@ -139,7 +139,7 @@ Cross-validation is a statistical technique. Researchers use it to assess the pe
 
 ## Follow the instructions:
 
-### didactic repository for pattern recognition:
+### Didactic repository for pattern recognition:
 
 -	It is not within the scope of this package to create the database. A third party has already created the learning repository. This structure follows the methodology of the ELM inventors.
 -	In the path **dataset/classification/diabetes_train**, you can see the structure of the repository as shown in Fig. 5. 
@@ -166,7 +166,7 @@ Cross-validation is a statistical technique. Researchers use it to assess the pe
 -    You can use databases from [Kaggle](https://www.kaggle.com/) or [UCI](https://archive.ics.uci.edu/datasets). Search for repositories on their websites that specialize in predicting and analyzing time series.
 -    In the terminal, use the extreme neural network in didactic repository. Here's an example:
 
-### Parameters of the extreme learning machine:
+### Parameters of the Extreme Learning Machine:
 
 -    -tr: learning repository reversed to the training phase.
 -    -ts: learning repository reversed to the testing phase.
