@@ -21,10 +21,26 @@ pip install scikit-learn
 
 # Usage in distinct antiviruses
 
+## Antivirus for IoT _malware_ from ARM architectures
+
+python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tall [Antivirus_Dataset_IoT_ARM_mELM_format.csv](https://github.com/DejavuForensics/IoT_ARM/blob/main/Antivirus_Dataset_IoT_ARM_mELM_format.csv) 
+-kfold 10 -virusNorm -ty 1 -nh 500 -af dilation -v
+
+```
+Tavares-Silva, S.H.M., Lopes-Lima, S.M., Paranhos-Pinheiro, R. et al.
+Antivirus solution to IoT malware detection with authorial next-generation sandbox.
+The Journal of Supercomputing 81, 151 (2025).
+https://doi.org/10.1007/s11227-024-06506-x
+
+Pinheiro Henriques de Araújo, I., Mariano Santiago de Abreu, L., Henrique Mendes Tavares Silva, S. et al.
+Antimalware applied to IoT malware detection based on softcore processor endowed with authorial sandbox.
+Journal of Computer Virology and Hacking Techniques 20, 729–749 (2024).
+https://doi.org/10.1007/s11416-024-00526-0
+
 ## Antivirus for IoT _malware_ from SPARC architectures
 
 python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tall [Antivirus_Dataset_IoT_SPARC_mELM_format.csv](https://github.com/DejavuForensics/IoT_SPARC/blob/main/Antivirus_Dataset_IoT_SPARC_mELM_format.csv) 
--ty 1 -nh 500 -af dilation -v
+-kfold 10 -virusNorm -ty 1 -nh 500 -af dilation -v
 
 ```
 Pinheiro Henriques de Araújo, I., Mariano Santiago de Abreu, L., Henrique Mendes Tavares Silva, S. et al.
@@ -36,7 +52,7 @@ https://doi.org/10.1007/s11416-024-00526-0
 ## Antivirus for Citadel _malware_
 
 python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tall [Antivirus_Dataset_PE32_Citadel_mELM_format.csv](https://github.com/DejavuForensics/Citadel/blob/main/Antivirus_Dataset_PE32_Citadel_mELM_format.csv) 
--ty 1 -nh 500 -af dilation -v
+-kfold 10 -virusNorm -ty 1 -nh 500 -af dilation -v
 
 ```
 Carlos Henrique Macedo dos Santos, Sidney Marlon Lopes de Lima,
@@ -49,7 +65,7 @@ https://doi.org/10.1016/j.jocs.2024.102389.
 ## Antivirus for Java apps
 
 python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tall [Antivirus_Dataset_Jar_mELM_format.csv](https://github.com/DejavuForensics/REJAFADA/blob/master/Antivirus_Dataset_Jar_mELM_format.zip) 
--ty 1 -nh 500 -af dilation -v
+-kfold 10 -virusNorm -ty 1 -nh 500 -af dilation -v
 
 ```
 Pinheiro, R.P., Lima, S.M.L., Souza, D.M. et al. 
@@ -61,7 +77,7 @@ https://doi.org/10.1038/s41598-022-05921-5
 ## Antivirus for PHP apps
 
 python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tall [Antivirus_Dataset_PHP_batch_1_mELM_format](https://github.com/DejavuForensics/PAEMAL/blob/master/Antivirus_Dataset_PHP_batch_1_mELM_format.csv) 
--ty 1 -nh 500 -af dilation -v
+-kfold 10 -virusNorm -ty 1 -nh 500 -af dilation -v
 
 ```
 Lima, S.M.L., Silva, S.H.M.T., Pinheiro, R.P. et al.
@@ -74,7 +90,7 @@ https://doi.org/10.1007/s00500-022-07447-4
 
 python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tall [Antivirus_Dataset_JavaScript_mELM_format.csv](
 https://github.com/DejavuForensics/MARADJS/blob/master/Antivirus_Dataset_JavaScript_mELM_format.zip) 
--ty 1 -nh 500 -af dilation -v
+-kfold 10 -virusNorm -ty 1 -nh 500 -af dilation -v
 
 ```
 de Lima, S.M.L., Souza, D.M., Pinheiro, R.P. et al. 
