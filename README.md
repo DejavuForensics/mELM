@@ -31,11 +31,7 @@ Tavares-Silva, S.H.M., Lopes-Lima, S.M., Paranhos-Pinheiro, R. et al.
 Antivirus solution to IoT malware detection with authorial next-generation sandbox.
 The Journal of Supercomputing 81, 151 (2025).
 https://doi.org/10.1007/s11227-024-06506-x
-
-Pinheiro Henriques de Araújo, I., Mariano Santiago de Abreu, L., Henrique Mendes Tavares Silva, S. et al.
-Antimalware applied to IoT malware detection based on softcore processor endowed with authorial sandbox.
-Journal of Computer Virology and Hacking Techniques 20, 729–749 (2024).
-https://doi.org/10.1007/s11416-024-00526-0
+```
 
 ## Antivirus for IoT _malware_ from SPARC architectures
 
@@ -45,7 +41,7 @@ python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py)
 ```
 Pinheiro Henriques de Araújo, I., Mariano Santiago de Abreu, L., Henrique Mendes Tavares Silva, S. et al.
 Antimalware applied to IoT malware detection based on softcore processor endowed with authorial sandbox.
-Journal of Computer Virology and Hacking Techniques (2024).
+Journal of Computer Virology and Hacking Techniques 20, 729–749 (2024).
 https://doi.org/10.1007/s11416-024-00526-0
 ```
 
