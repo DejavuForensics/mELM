@@ -93,7 +93,7 @@ https://github.com/DejavuForensics/MARADJS/blob/master/Antivirus_Dataset_JavaScr
 ```
 de Lima, S.M.L., Souza, D.M., Pinheiro, R.P. et al. 
 Next-generation antivirus for JavaScript malware detection based on dynamic features. 
-Knowl Inf Syst (2023). 
+Knowledge and Information Systems 66, 1337–1370 (2024).
 https://doi.org/10.1007/s10115-023-01978-4
 ```
 
