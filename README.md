@@ -148,8 +148,7 @@ Cross-validation is a statistical technique. Researchers use it to assess the pe
 - At the end of learning (training), the ELM neural network will be capable of generalization. The ELM will classify the unseen sample as either class (1.0) or counter-class (0.0). An unseen sample refers to a sample not presented during training.
 -    In the terminal, use the extreme neural network in didactic repository. Here's an example:
    
-python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tr [diabetes_train](https://github.com/DejavuForensics/mELM/blob/main/dataset/classification/diabetes_train) -ts [diabetes_test](https://github.com/DejavuForensics/mELM/blob/main/dataset/classification/diabetes_test) 
--virusNorm -ty 1 -nh 100 -af dilation -v
+python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tr [diabetes_train](https://github.com/DejavuForensics/mELM/blob/main/dataset/classification/diabetes_train) -ts [diabetes_test](https://github.com/DejavuForensics/mELM/blob/main/dataset/classification/diabetes_test)  -ty 1 -virusNorm -nh 100 -af dilation -v
 
 ### Authorial repository for pattern recognition:
 
@@ -161,7 +160,7 @@ python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py)
 -    In the terminal, use the extreme neural network in professional repository. Here's an example:
   
 python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tall [Antivirus_Dataset_PE32_Citadel_mELM_format.csv](https://github.com/DejavuForensics/Citadel/blob/main/Antivirus_Dataset_PE32_Citadel_mELM_format.csv) 
--kfold 10 -virusNorm -ty 1 -nh 500 -af dilation -v
+-kfold 10 -ty 1 -virusNorm -nh 500 -af dilation -v
 
 ### Didactic repository for prediction:
 
