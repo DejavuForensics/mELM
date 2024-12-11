@@ -148,7 +148,7 @@ Cross-validation is a statistical technique. Researchers use it to assess the pe
 - At the end of learning (training), the ELM neural network will be capable of generalization. The ELM will classify the unseen sample as either class (1.0) or counter-class (0.0). An unseen sample refers to a sample not presented during training.
 
 python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tr [diabetes_train](https://github.com/DejavuForensics/mELM/blob/main/dataset/classification/diabetes_train) -ts [diabetes_test](https://github.com/DejavuForensics/mELM/blob/main/dataset/classification/diabetes_test) 
--ty 1 -nh 100 -af dilation -v
+-virusNorm -ty 1 -nh 100 -af dilation -v
 
 ### Authorial repository for pattern recognition:
 
@@ -171,6 +171,9 @@ python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py)
 -    The "mELM" package has a didactic dataset for prediction. It follows the methodology of the creators of ELM. However the authorial structure allows people to experiment with databases in real-world situations. These follow the structure shown in Figure \ref{fig:8_71}. In prediction problems, the second column must be a floating value. We only use classes in pattern recognition.
 -    You can use databases from [Kaggle](https://www.kaggle.com/) or [UCI](https://archive.ics.uci.edu/datasets). Search for repositories on their websites that specialize in predicting and analyzing time series.
 -    In the terminal, use the extreme neural network in didactic repository. Here's an example:
+
+python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tr [sinc_train](https://github.com/DejavuForensics/mELM/blob/main/dataset/classification/sinc_train) -ts [sinc_test](https://github.com/DejavuForensics/mELM/blob/main/dataset/classification/sinc_test) 
+-virusNorm -ty 0 -nh 100 -af dilation -v
 
 ### Parameters of the Extreme Learning Machine:
 
