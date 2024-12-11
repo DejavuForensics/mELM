@@ -139,10 +139,9 @@ The kernels mELMs are successful because they can model any decision boundary. T
 -    -ts: learning repository reversed to the testing phase.
 -    -tall: learning repository, this includes the training and testing phase.
 -    -kfold: refers to the use of the _k-fold_ method, which must be set to a non-null natural value. As discussed in the previous chapter, _k-fold_ trains the neural network in _k_ runs. In each run, we divide the data set. We use all samples in alternating phases for training and testing.
--virusNorm: This config is useful for working with morphological _kernels_. They perform operations based on comparisons and set unions and intersections. For the morphological model to work, synapses between input and hidden neurons must match the sample interval. virusNorm is a normalization technique. It uses malware samples from the VirusShare database as a reference.
+-    -virusNorm: This config is useful for working with morphological _kernels_. They perform operations based on comparisons and set unions and intersections. For the morphological model to work, synapses between input and hidden neurons must match the sample interval. virusNorm is a normalization technique. It uses malware samples from the VirusShare database as a reference.
 [https://virusshare.com](https://virusshare.com).
--sep: caractere ou padrão de expressão regular usado como delimitador do repositório de aprendizado estatístico. Por padrão, é utilizado um espaço como delimitador nos arquivos \textit{"TrainingData\_File"} e \textit{"TestingData\_File"}, e o caractere ponto e vírgula (;) para o arquivo \textit{"AllData\_File"}.
-
+-    -sep: the delimiter of the statistical learning repository is a regular expression pattern. By default, a space is the delimiter in the _TrainingData_File_ and _TestingData_File_ files. It is a semicolon (;) for the _AllData_File_ file.
 -    -ty:
         -    1: classification (pattern recognition). 
         -    0: regression (prediction: prediction with scientific-methodological rigor).
@@ -162,14 +161,6 @@ The kernels mELMs are successful because they can model any decision boundary. T
         - Kernel Radial Basis Function: radbas
 -    -sd: random number generator seed.
 -    -v: verbose output.
--    In the console, use the extreme neural network in didactic repository. Here's an example:
-```
-python melm.py -tr dataset/classification/diabetes_train -ts dataset/classification/diabetes_test -ty 1 -nh 100 -af dilation -v
-```
--    In the console, use the extreme neural network in a real repository. Here's an example:
-```
-python melm.py -tall dataset/classification/Antivirus_Dataset_PE32_Citadel_mELM_format.csv -ty 1 -nh 500 -af dilation -v
-```
 
 ## Prediction
 
@@ -204,7 +195,7 @@ Cross-validation is a statistical technique. Researchers use it to assess the pe
 - At the end of learning (training), the ELM neural network will be capable of prediction. The ELM will estimate a floating value from a given input neuron. 
 -    The "mELM" package has a didactic dataset for prediction. It follows the methodology of the creators of ELM. However the authorial structure allows people to experiment with databases in real-world situations. These follow the structure shown in Figure \ref{fig:8_71}. In prediction problems, the second column must be a floating value. We only use classes in pattern recognition.
 -    You can use databases from [Kaggle](https://www.kaggle.com/) or [UCI](https://archive.ics.uci.edu/datasets). Search for repositories on their websites that specialize in predicting and analyzing time series.
--    In the console, use the extreme neural network in didactic repository. Here's an example:
+-    In the terminal, use the extreme neural network in didactic repository. Here's an example:
 ```
 python melm.py -tr dataset/dataset/regression/sinc_train -ts dataset/dataset/regression/sinc_test -ty 1 -nh 500 -af dilation -v
 ```
