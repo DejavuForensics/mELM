@@ -12,7 +12,7 @@ pip install scikit-learn
 
 ## Antivirus for IoT _malware_ from ARM architectures
 
-python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tall [Antivirus_Dataset_IoT_SPARC_mELM_format.csv](https://github.com/DejavuForensics/IoT_ARM/blob/main/Antivirus_Dataset_IoT_ARM_mELM_format.csv) -kfold 10 -virusNorm -ty 1 -nh 500 -af dilation -v
+python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tall [Antivirus_Dataset_IoT_SPARC_mELM_format.csv](https://github.com/DejavuForensics/IoT_ARM/blob/main/Antivirus_Dataset_IoT_ARM_mELM_format.csv) -kfold 10 -ty 1 -virusNorm -nh 500 -af dilation -v
 
 ```
 Tavares-Silva, S.H.M., Lopes-Lima, S.M., Paranhos-Pinheiro, R. et al.
