@@ -23,8 +23,7 @@ pip install scikit-learn
 
 ## Antivirus for IoT _malware_ from ARM architectures
 
-python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tall [Antivirus_Dataset_IoT_ARM_mELM_format.csv](https://github.com/DejavuForensics/IoT_ARM/blob/main/Antivirus_Dataset_IoT_ARM_mELM_format.csv) 
--kfold 10 -virusNorm -ty 1 -nh 500 -af dilation -v
+python [melm.py](https://github.com/DejavuForensics/mELM/melm.py) -tall [Antivirus_Dataset_IoT_SPARC_mELM_format.csv](https://github.com/DejavuForensics/IoT_ARM/blob/main/Antivirus_Dataset_IoT_ARM_mELM_format.csv) -kfold 10 -virusNorm -ty 1 -nh 500 -af dilation -v
 
 ```
 Tavares-Silva, S.H.M., Lopes-Lima, S.M., Paranhos-Pinheiro, R. et al.
@@ -53,8 +52,7 @@ python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py)
 ```
 Carlos Henrique Macedo dos Santos, Sidney Marlon Lopes de Lima,
 XAI-driven antivirus in pattern identification of citadel malware,
-Journal of Computational Science,
-82,102389 (2024).
+Journal of Computational Science, 82 (2024): 102389.
 https://doi.org/10.1016/j.jocs.2024.102389.
 ```
 
@@ -79,7 +77,7 @@ python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py)
 ```
 Lima, S.M.L., Silva, S.H.M.T., Pinheiro, R.P. et al.
 Next-generation antivirus endowed with web-server Sandbox applied to audit fileless attack.
-Soft Comput 27, 1471–1491 (2023).
+Soft Computing 27, 1471–1491 (2023).
 https://doi.org/10.1007/s00500-022-07447-4
 ```
 
