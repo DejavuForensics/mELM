@@ -59,6 +59,7 @@ https://doi.org/10.1016/j.jocs.2024.102389.
 ```
 
 ## Antivirus for Java apps
+The database is compressed due to the individual file size delimited by github. Download the compressed file (.zip) to your computer and decompress it before running the extreme neural networks.
 
 python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tall [Antivirus_Dataset_Jar_mELM_format.csv](https://github.com/DejavuForensics/REJAFADA/blob/master/Antivirus_Dataset_Jar_mELM_format.zip) 
 -kfold 10 -virusNorm -ty 1 -nh 500 -af dilation -v
@@ -83,6 +84,7 @@ https://doi.org/10.1007/s00500-022-07447-4
 ```
 
 ## Antivirus for JavaScript apps
+The database is compressed due to the individual file size delimited by github. Download the compressed file (.zip) to your computer and decompress it before running the extreme neural networks.
 
 python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tall [Antivirus_Dataset_JavaScript_mELM_format.csv](
 https://github.com/DejavuForensics/MARADJS/blob/master/Antivirus_Dataset_JavaScript_mELM_format.zip) 
