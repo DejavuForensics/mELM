@@ -115,6 +115,28 @@ Fig. 3 (a), Fig. 3 (b), Fig. 3 (c) and Fig. 3 (d) show the performance of the mE
 
 The kernels mELMs are successful because they can model any decision boundary. They do not follow conventional geometric surfaces like ellipses and hyperbolas. The mELMs kernels map the decision boundary in _n_-dimensional. The coordinates are based on training samples. _n_ represents the number of extracted features. mELMs can detect and model different classes by using Mathematical Morphology. It detects the shapes of bodies in images.
 
+## Prediction
+
+When it comes to prediction, the neural network estimates a fractional value. By prediction, we mean a forecast with scientific-methodological rigor. To train the neural network, we show it a series of historical data over time. Example, the neural network examines the daily price of oil for the past few years. The output neuron receives the daily oil price. The input neurons receive the events during that time. Events refer to government decisions, elections, coup attempts, and natural phenomena like droughts.
+
+During training, neurons adjust their connections to prioritize periodic events. 
+Seemingly irrelevant daily events can affect the daily oil price.
+A person would not usually connect a small event to changes in oil prices. The neural network helps people link past events to current oil prices.
+Neural networks are helpful in predicting and preventing natural disasters. Neural networks can predict when a flood will happen, giving advanced warning. In synthesis, neural networks play a fundamental role in building smart city metamodels. Smart cities use electronic sensors to gather data and reduce the effects of natural disasters. 
+
+The evaluation of pattern recognition is different from prediction. In the context of pattern recognition, the main metric is accuracy. Neural networks perform better when closer to 100 percent in specific application. In the prediction scenario, the crucial metric is the root mean square error. The closer this is to 0, the better the performance of the neural network. The model aims to predict well by minimizing the gap between expected and actual outcomes.
+
+## K-fold
+Cross-validation is a statistical technique. Researchers use it to assess the performance of a machine learning model. It divides the data set into parts, or ‘folds’. You can train and test the model many times on different data subsets. The aim is to ensure that the model generalises well to new and unseen data. The k-fold method is a type of cross-validation. In it, the data set is randomly split into k equal subsets (or folds). The k-fold involves the following steps:
+
+- **Data division**: the data set is divided into k approximately equal parts.
+
+- **Training and testing**: for each of the k folds, the model is trained using k-1 folds and tested on the remaining fold.
+
+- **Repeating the process**: this process is repeated k times, each time with a different fold acting as the test set.
+
+- **Average and standard deviation of results**: performance metrics are calculated for each of the k runs. For each run, we calculate the average and standard deviation. We then average these metrics. This gives the model's final performance.
+
 ## Follow the instructions:
 
 ### didactic repository for pattern recognition:
@@ -132,6 +154,17 @@ The kernels mELMs are successful because they can model any decision boundary. T
  	- **Second column**: 1; the sample (row) belongs to the class malware (Citadel). 0; the sample (row) belongs to the counter-class (serious app).
     - **Other columns**: input attributes (neurons) referring to features of the target application. In this diabetes_train, there are 430 input neurons. For example, in the first sample (row), the first neuron has a value of 0.
 - At the end of learning (training), the ELM neural network will be capable of generalization. The ELM will classify the unseen sample as either class (1.0) or counter-class (0.0). An unseen sample refers to a sample not presented during training.
+
+### Didactic repository for prediction:
+
+-	It is not within the scope of this package to create the database. A third party has already created the learning repository. This structure follows the methodology of the ELM inventors.
+-	In the path **dataset/dataset/regression/sinc_train**, you can see the structure of the repository as shown in Fig. 7. 
+    - **First column**: floating value to be estimated.
+    - **Second column**: input attribute (neuron). This is a didactic and hypothetical database. A real application could have hundreds of input neurons.
+- At the end of learning (training), the ELM neural network will be capable of prediction. The ELM will estimate a floating value from a given input neuron. 
+-    The "mELM" package has a didactic dataset for prediction. It follows the methodology of the creators of ELM. However the authorial structure allows people to experiment with databases in real-world situations. These follow the structure shown in Figure \ref{fig:8_71}. In prediction problems, the second column must be a floating value. We only use classes in pattern recognition.
+-    You can use databases from [Kaggle](https://www.kaggle.com/) or [UCI](https://archive.ics.uci.edu/datasets). Search for repositories on their websites that specialize in predicting and analyzing time series.
+-    In the terminal, use the extreme neural network in didactic repository. Here's an example:
 
 ### Parameters of the extreme learning machine:
 
@@ -162,43 +195,6 @@ The kernels mELMs are successful because they can model any decision boundary. T
 -    -sd: random number generator seed.
 -    -v: verbose output.
 
-## Prediction
-
-When it comes to prediction, the neural network estimates a fractional value. By prediction, we mean a forecast with scientific-methodological rigor. To train the neural network, we show it a series of historical data over time. Example, the neural network examines the daily price of oil for the past few years. The output neuron receives the daily oil price. The input neurons receive the events during that time. Events refer to government decisions, elections, coup attempts, and natural phenomena like droughts.
-
-During training, neurons adjust their connections to prioritize periodic events. 
-Seemingly irrelevant daily events can affect the daily oil price.
-A person would not usually connect a small event to changes in oil prices. The neural network helps people link past events to current oil prices.
-Neural networks are helpful in predicting and preventing natural disasters. Neural networks can predict when a flood will happen, giving advanced warning. In synthesis, neural networks play a fundamental role in building smart city metamodels. Smart cities use electronic sensors to gather data and reduce the effects of natural disasters. 
-
-The evaluation of pattern recognition is different from prediction. In the context of pattern recognition, the main metric is accuracy. Neural networks perform better when closer to 100 percent in specific application. In the prediction scenario, the crucial metric is the root mean square error. The closer this is to 0, the better the performance of the neural network. The model aims to predict well by minimizing the gap between expected and actual outcomes.
-
-## K-fold
-Cross-validation is a statistical technique. Researchers use it to assess the performance of a machine learning model. It divides the data set into parts, or ‘folds’. You can train and test the model many times on different data subsets. The aim is to ensure that the model generalises well to new and unseen data. The k-fold method is a type of cross-validation. In it, the data set is randomly split into k equal subsets (or folds). The k-fold involves the following steps:
-
-- **Data division**: the data set is divided into k approximately equal parts.
-
-- **Training and testing**: for each of the k folds, the model is trained using k-1 folds and tested on the remaining fold.
-
-- **Repeating the process**: this process is repeated k times, each time with a different fold acting as the test set.
-
-- **Average and standard deviation of results**: performance metrics are calculated for each of the k runs. For each run, we calculate the average and standard deviation. We then average these metrics. This gives the model's final performance.
-
-## Follow the instructions:
-
-### Didactic repository for prediction:
-
--	It is not within the scope of this package to create the database. A third party has already created the learning repository. This structure follows the methodology of the ELM inventors.
--	In the path **dataset/dataset/regression/sinc_train**, you can see the structure of the repository as shown in Fig. 7. 
-    - **First column**: floating value to be estimated.
-    - **Second column**: input attribute (neuron). This is a didactic and hypothetical database. A real application could have hundreds of input neurons.
-- At the end of learning (training), the ELM neural network will be capable of prediction. The ELM will estimate a floating value from a given input neuron. 
--    The "mELM" package has a didactic dataset for prediction. It follows the methodology of the creators of ELM. However the authorial structure allows people to experiment with databases in real-world situations. These follow the structure shown in Figure \ref{fig:8_71}. In prediction problems, the second column must be a floating value. We only use classes in pattern recognition.
--    You can use databases from [Kaggle](https://www.kaggle.com/) or [UCI](https://archive.ics.uci.edu/datasets). Search for repositories on their websites that specialize in predicting and analyzing time series.
--    In the terminal, use the extreme neural network in didactic repository. Here's an example:
-```
-python melm.py -tr dataset/dataset/regression/sinc_train -ts dataset/dataset/regression/sinc_test -ty 1 -nh 500 -af dilation -v
-```
 
 
 
