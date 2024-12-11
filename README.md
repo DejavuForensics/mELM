@@ -84,17 +84,6 @@ Knowledge and Information Systems 66, 1337–1370 (2024).
 https://doi.org/10.1007/s10115-023-01978-4
 ```
 
-## K-fold
-Cross-validation is a statistical technique. Researchers use it to assess the performance of a machine learning model. It divides the data set into parts, or ‘folds’. You can train and test the model many times on different data subsets. The aim is to ensure that the model generalises well to new and unseen data. The k-fold method is a type of cross-validation. In it, the data set is randomly split into k equal subsets (or folds). The k-fold involves the following steps:
-
-- **Data division**: the data set is divided into k approximately equal parts.
-
-- **Training and testing**: for each of the k folds, the model is trained using k-1 folds and tested on the remaining fold.
-
-- **Repeating the process**: this process is repeated k times, each time with a different fold acting as the test set.
-
-- **Average and standard deviation of results**: performance metrics are calculated for each of the k runs. For each run, we calculate the average and standard deviation. We then average these metrics. This gives the model's final performance.
-
 ## Theoretical Background
 
 Neural network is a computational intelligence model employed to solve pattern recognition problems. Neural networks can generalize and recognize new data that wasn't taught during training. In backpropagation strategy, adjusting many parameters is necessary to improve neural network performance. 
@@ -187,6 +176,17 @@ A person would not usually connect a small event to changes in oil prices. The n
 Neural networks are helpful in predicting and preventing natural disasters. Neural networks can predict when a flood will happen, giving advanced warning. In synthesis, neural networks play a fundamental role in building smart city metamodels. Smart cities use electronic sensors to gather data and reduce the effects of natural disasters. 
 
 The evaluation of pattern recognition is different from prediction. In the context of pattern recognition, the main metric is accuracy. Neural networks perform better when closer to 100 percent in specific application. In the prediction scenario, the crucial metric is the root mean square error. The closer this is to 0, the better the performance of the neural network. The model aims to predict well by minimizing the gap between expected and actual outcomes.
+
+## K-fold
+Cross-validation is a statistical technique. Researchers use it to assess the performance of a machine learning model. It divides the data set into parts, or ‘folds’. You can train and test the model many times on different data subsets. The aim is to ensure that the model generalises well to new and unseen data. The k-fold method is a type of cross-validation. In it, the data set is randomly split into k equal subsets (or folds). The k-fold involves the following steps:
+
+- **Data division**: the data set is divided into k approximately equal parts.
+
+- **Training and testing**: for each of the k folds, the model is trained using k-1 folds and tested on the remaining fold.
+
+- **Repeating the process**: this process is repeated k times, each time with a different fold acting as the test set.
+
+- **Average and standard deviation of results**: performance metrics are calculated for each of the k runs. For each run, we calculate the average and standard deviation. We then average these metrics. This gives the model's final performance.
 
 ## Follow the instructions:
 
