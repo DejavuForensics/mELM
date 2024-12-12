@@ -104,10 +104,16 @@ class melm():
 				mean_timing_test = np.mean(timing_test)
 				std_timing_test = np.std(timing_test)	
 				print('...................K-fold mean results........................')
-				print(f"Train Mean Accuracy: {100*mean_accuracy_train:.2f}% ± {std_accuracy_train:.2f}%")
-				print(f"Test Mean Accuracy: {100*mean_accuracy_test:.2f}% ± {std_accuracy_test:.2f}%")
-				print(f"Train Mean Timing: {mean_timing_train:.2f} sec. ± {std_timing_train:.2f} sec.")
-				print(f"Test Mean Timing: {mean_timing_test:.2f} sec. ± {std_timing_test:.2f} sec.")
+				if Elm_Type==0:
+					print(f"Train RMSE (Root Mean-Square Error): {mean_accuracy_train} ± {std_accuracy_train}")
+					print(f"Test RMSE (Root Mean-Square Error): {mean_accuracy_test} ± {std_accuracy_test}")
+					print(f"Train Mean Timing: {mean_timing_train:.2f} sec. ± {std_timing_train:.2f} sec.")
+					print(f"Test Mean Timing: {mean_timing_test:.2f} sec. ± {std_timing_test:.2f} sec.")
+				else:
+					print(f"Train Mean Accuracy: {100*mean_accuracy_train:.2f}% ± {std_accuracy_train:.2f}%")
+					print(f"Test Mean Accuracy: {100*mean_accuracy_test:.2f}% ± {std_accuracy_test:.2f}%")
+					print(f"Train Mean Timing: {mean_timing_train:.2f} sec. ± {std_timing_train:.2f} sec.")
+					print(f"Test Mean Timing: {mean_timing_test:.2f} sec. ± {std_timing_test:.2f} sec.")
 #========================================================================
 def eliminateNaN(vector):
 
@@ -250,7 +256,7 @@ def mElmLearning(train_data, test_data,execution,Elm_Type,NumberofHiddenNeurons,
 		TrainingAccuracy = np.square(np.subtract(T, Y)).mean()
 		TrainingAccuracy = round(TrainingAccuracy, 6) 
 		print('.........................................')
-		print('Training Accuracy: ' + str(TrainingAccuracy)+' ( ' + str(np.size(Y,0)) + ' samples) (regression)')
+		print('Training RMSE (Root Mean-Square Error): ' + str(TrainingAccuracy)+' ( ' + str(np.size(Y,0)) + ' samples) (regression)')
 	del(H)
 	
 	if verbose: print ('Calculate the output of testing input')  
@@ -271,6 +277,8 @@ def mElmLearning(train_data, test_data,execution,Elm_Type,NumberofHiddenNeurons,
 		TestingAccuracy = np.square(np.subtract(TVT, TY)).mean()
 		TestingAccuracy = round(TestingAccuracy, 6) 
 		print('Testing RMSE (Root Mean-Square Error): ' + str(TestingAccuracy)+' ( ' + str(np.size(TY,0)) + ' samples) (regression)')
+		print('Training Time: ' + str(round(TrainingTime,2)) + ' sec.')
+		print('Testing Time: ' + str(round(TestingTime,2)) + ' sec.')
 	else:
 		if verbose: print ('Calculate training & testing classification accuracy')  
 		#%%%%%%%%%% Calculate training & testing classification accuracy
