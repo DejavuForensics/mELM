@@ -120,6 +120,8 @@ The kernels mELMs are successful because they can model any decision boundary. T
   <figcaption>Figure 1: Successful performances of the _kernels_ compatible with the datasets.</figcaption>
 </figure>
 
+
+
 <figure>
   <img src="https://github.com/DejavuForensics/mELM/blob/main/dataset/ELM_1.png" alt="Successful performances of the _kernels_ compatible with the datasets.">
   <figcaption>Figure 2: Unsuccessful performances of _kernel_ Linear on non-linearly separable datasets.</figcaption>
