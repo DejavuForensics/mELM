@@ -209,9 +209,10 @@ python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py)
 ### Authorial repository for pattern recognition:
 
 -	In the path **dataset/classification/Antivirus_Dataset_PE32_Citadel_mELM_format.csv**, you can see the structure of the repository as shown in Fig. 6.
-    - **First column**: The application's name. The applications and their respective raw analyses are in the [Citadel repository](https://github.com/DejavuForensics/Citadel).
- 	- **Second column**: 1; the sample (row) belongs to the class malware (Citadel). 0; the sample (row) belongs to the counter-class (serious app).
-    - **Other columns**: input attributes (neurons) referring to features of the target application. In this diabetes_train, there are 430 input neurons. For example, in the first sample (row), the first neuron has a value of 0.
+-    -**First line**:
+        - **First column of first row**: popular name of the file that makes up the dataset.
+        - **More columns in first row**: the input neurons in the database used correspond to the repertoire of instructions, the calls to the operating system (_syscall_) and the dependencies of the suspect application.
+-    -**More lines**:
 - At the end of learning (training), the ELM neural network will be capable of generalization. The ELM will classify the unseen sample as either class (1.0) or counter-class (0.0). An unseen sample refers to a sample not presented during training.
 -    In the terminal, use the extreme neural network in professional repository. Here's an example:
   
