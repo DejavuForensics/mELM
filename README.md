@@ -209,12 +209,10 @@ python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py)
 ### Authorial repository for pattern recognition:
 
 -	In the path **dataset/classification/Antivirus_Dataset_PE32_Citadel_mELM_format.csv**, you can see the structure of the repository as shown in Fig. 6.
--    -**First line**:
-        - **First column of first row**: popular name of the file that makes up the dataset.
-        - **More columns in first row**: the input neurons in the database used correspond to the repertoire of instructions, the calls to the operating system (_syscall_) and the dependencies of the suspect application.
--    -**More lines**:
-- At the end of learning (training), the ELM neural network will be capable of generalization. The ELM will classify the unseen sample as either class (1.0) or counter-class (0.0). An unseen sample refers to a sample not presented during training.
--    In the terminal, use the extreme neural network in professional repository. Here's an example:
+- **First column**: popular name of the file that makes up the dataset.
+- **Second column**: corresponds to the output attribute of the repository. 1; the sample (line) belongs to the class (_citadel_ _malware_). 0; the sample (line) belongs to the counter-class.
+- **More columns**: the input neurons in the database used correspond to the repertoire of instructions, the calls to the operating system (_syscall_) and the dependencies of the suspect application. In the dataset in figure 6, there are 430 input neurons. For example, in the first sample, the first neuron corresponds to the instruction 'aaa' and has a value of 0.
+- In the terminal, use the extreme neural network in professional repository. Here's an example:
   
 python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tall [Antivirus_Dataset_PE32_Citadel_mELM_format.csv](https://github.com/DejavuForensics/Citadel/blob/main/Antivirus_Dataset_PE32_Citadel_mELM_format.csv) 
 -kfold 10 -ty 1 -virusNorm -nh 500 -af dilation -v
