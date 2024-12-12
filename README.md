@@ -123,17 +123,17 @@ The kernels mELMs are successful because they can model any decision boundary. T
 
 
 <figure>
-  <img src="https://github.com/DejavuForensics/mELM/blob/main/dataset/ELM_1.png" alt="Successful performances of the _kernels_ compatible with the datasets.">
+  <img src="https://github.com/DejavuForensics/mELM/blob/main/dataset/ELM_1.png" alt="Unsuccessful performances of _kernel_ Linear on non-linearly separable datasets.">
   <figcaption>Figure 2: Unsuccessful performances of _kernel_ Linear on non-linearly separable datasets.</figcaption>
 </figure>
 
 <figure>
-  <img src="https://github.com/DejavuForensics/mELM/blob/main/dataset/ELM_3.png" alt="Successful performances of the _kernels_ compatible with the datasets.">
+  <img src="https://github.com/DejavuForensics/mELM/blob/main/dataset/ELM_3.png" alt="Successful performances of the mELM Erosion kernel in multiple datasets.">
   <figcaption>Figure 3: Successful performances of the mELM Erosion kernel in multiple datasets.</figcaption>
 </figure>
 
 <figure>
-  <img src="https://github.com/DejavuForensics/mELM/blob/main/dataset/ELM_4.png" alt="Successful performances of the _kernels_ compatible with the datasets.">
+  <img src="https://github.com/DejavuForensics/mELM/blob/main/dataset/ELM_4.png" alt="Successful performances of the mELM Dilation kernel in multiple datasets.">
   <figcaption>Figure 4: Successful performances of the mELM Dilation kernel in multiple datasets.</figcaption>
 </figure>
 
@@ -172,6 +172,11 @@ Cross-validation is a statistical technique. Researchers use it to assess the pe
    
 python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tr [diabetes_train](https://github.com/DejavuForensics/mELM/blob/main/dataset/classification/diabetes_train) -ts [diabetes_test](https://github.com/DejavuForensics/mELM/blob/main/dataset/classification/diabetes_test)  -ty 1 -virusNorm -nh 100 -af dilation -v
 
+<figure>
+  <img src="https://github.com/DejavuForensics/mELM/blob/main/dataset/ELM_5.png" alt="Structure of a pattern recognition repository for the use of ELM as a classifier.">
+  <figcaption>Figure 5: Structure of a pattern recognition repository for the use of ELM as a classifier.</figcaption>
+</figure>
+
 ### Authorial repository for pattern recognition:
 
 -	In the path **dataset/classification/Antivirus_Dataset_PE32_Citadel_mELM_format.csv**, you can see the structure of the repository as shown in Fig. 6.
@@ -183,6 +188,11 @@ python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py)
   
 python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tall [Antivirus_Dataset_PE32_Citadel_mELM_format.csv](https://github.com/DejavuForensics/Citadel/blob/main/Antivirus_Dataset_PE32_Citadel_mELM_format.csv) 
 -kfold 10 -ty 1 -virusNorm -nh 500 -af dilation -v
+
+<figure>
+  <img src="https://github.com/DejavuForensics/mELM/blob/main/dataset/ELM_6.png" alt="Structure of a repository for pattern recognition of _malware_ with a view to using ELM as a classifier.">
+  <figcaption>Figure 6: Structure of a repository for pattern recognition of _malware_ with a view to using ELM as a classifier.</figcaption>
+</figure>
 
 ### Didactic repository for prediction:
 
