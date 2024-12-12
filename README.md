@@ -115,6 +115,26 @@ Fig. 3 (a), Fig. 3 (b), Fig. 3 (c) and Fig. 3 (d) show the performance of the mE
 
 The kernels mELMs are successful because they can model any decision boundary. They do not follow conventional geometric surfaces like ellipses and hyperbolas. The mELMs kernels map the decision boundary in _n_-dimensional. The coordinates are based on training samples. _n_ represents the number of extracted features. mELMs can detect and model different classes by using Mathematical Morphology. It detects the shapes of bodies in images.
 
+<figure>
+  <img src="https://github.com/DejavuForensics/mELM/blob/main/dataset/ELM_1.png" alt="Successful performances of the _kernels_ compatible with the datasets.">
+  <figcaption>Figure 1: Successful performances of the _kernels_ compatible with the datasets.</figcaption>
+</figure>
+
+<figure>
+  <img src="https://github.com/DejavuForensics/mELM/blob/main/dataset/ELM_1.png" alt="Successful performances of the _kernels_ compatible with the datasets.">
+  <figcaption>Figure 2: Unsuccessful performances of _kernel_ Linear on non-linearly separable datasets.</figcaption>
+</figure>
+
+<figure>
+  <img src="https://github.com/DejavuForensics/mELM/blob/main/dataset/ELM_3.png" alt="Successful performances of the _kernels_ compatible with the datasets.">
+  <figcaption>Figure 3: Successful performances of the mELM Erosion kernel in multiple datasets.</figcaption>
+</figure>
+
+<figure>
+  <img src="https://github.com/DejavuForensics/mELM/blob/main/dataset/ELM_4.png" alt="Successful performances of the _kernels_ compatible with the datasets.">
+  <figcaption>Figure 4: Successful performances of the mELM Dilation kernel in multiple datasets.</figcaption>
+</figure>
+
 ## Prediction
 
 When it comes to prediction, the neural network estimates a fractional value. By prediction, we mean a forecast with scientific-methodological rigor. To train the neural network, we show it a series of historical data over time. Example, the neural network examines the daily price of oil for the past few years. The output neuron receives the daily oil price. The input neurons receive the events during that time. Events refer to government decisions, elections, coup attempts, and natural phenomena like droughts.
