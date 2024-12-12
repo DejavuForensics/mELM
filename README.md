@@ -161,6 +161,35 @@ Cross-validation is a statistical technique. Researchers use it to assess the pe
 
 ## Follow the instructions:
 
+### Parameters of the Extreme Learning Machine:
+
+-    -tr: learning repository reversed to the training phase.
+-    -ts: learning repository reversed to the testing phase.
+-    -tall: learning repository, this includes the training and testing phase.
+-    -kfold: refers to the use of the _k-fold_ method, which must be set to a non-null natural value. As discussed in the previous chapter, _k-fold_ trains the neural network in _k_ runs. In each run, we divide the data set. We use all samples in alternating phases for training and testing.
+-    -virusNorm: This config is useful for working with morphological _kernels_. They perform operations based on comparisons and set unions and intersections. For the morphological model to work, synapses between input and hidden neurons must match the sample interval. virusNorm is a normalization technique. It uses malware samples from the VirusShare database as a reference.
+[https://virusshare.com](https://virusshare.com).
+-    -sep: the delimiter of the statistical learning repository is a regular expression pattern. By default, a space is the delimiter in the _TrainingData_File_ and _TestingData_File_ files. It is a semicolon (;) for the _AllData_File_ file.
+-    -ty:
+        -    1: classification (pattern recognition). 
+        -    0: regression (prediction: prediction with scientific-methodological rigor).
+-    -nh: number of neurons in the hidden layer.
+-    -af: activation function.
+        - Kernel Linear (default): linear
+        - Kernel mELM Dilation: dilation
+        - Kernel mELM Erosion: erosion
+        - Kernel Fuzzy-Erosion: fuzzy-erosion or fuzzy_erosion
+        - Kernel Fuzzy-Dilation: fuzzy-dilation ou fuzzy\_dilation
+        - Kernel Bitwise-Erosion: bitwise-erosion ou bitwise\_erosion
+        - Kernel Bitwise-Dilation: bitwise-dilation ou bitwise\_dilation
+        - Kernel Sigmoid: sig or sigmoid
+        - Kernel Sine: sin or sine
+        - Kernel Hard Limit: hardlim
+        - Kernel Triangular Basis Transfer Function: tribas
+        - Kernel Radial Basis Function: radbas
+-    -sd: random number generator seed.
+-    -v: verbose output.
+
 ### Didactic repository for pattern recognition:
 
 -	It is not within the scope of this package to create the database. A third party has already created the learning repository. This structure follows the methodology of the ELM inventors.
@@ -208,34 +237,10 @@ python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py)
 python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tr [sinc_train](https://github.com/DejavuForensics/mELM/blob/main/dataset/classification/sinc_train) -ts [sinc_test](https://github.com/DejavuForensics/mELM/blob/main/dataset/classification/sinc_test) 
 -virusNorm -ty 0 -nh 100 -af dilation -v
 
-### Parameters of the Extreme Learning Machine:
-
--    -tr: learning repository reversed to the training phase.
--    -ts: learning repository reversed to the testing phase.
--    -tall: learning repository, this includes the training and testing phase.
--    -kfold: refers to the use of the _k-fold_ method, which must be set to a non-null natural value. As discussed in the previous chapter, _k-fold_ trains the neural network in _k_ runs. In each run, we divide the data set. We use all samples in alternating phases for training and testing.
--    -virusNorm: This config is useful for working with morphological _kernels_. They perform operations based on comparisons and set unions and intersections. For the morphological model to work, synapses between input and hidden neurons must match the sample interval. virusNorm is a normalization technique. It uses malware samples from the VirusShare database as a reference.
-[https://virusshare.com](https://virusshare.com).
--    -sep: the delimiter of the statistical learning repository is a regular expression pattern. By default, a space is the delimiter in the _TrainingData_File_ and _TestingData_File_ files. It is a semicolon (;) for the _AllData_File_ file.
--    -ty:
-        -    1: classification (pattern recognition). 
-        -    0: regression (prediction: prediction with scientific-methodological rigor).
--    -nh: number of neurons in the hidden layer.
--    -af: activation function.
-        - Kernel Linear (default): linear
-        - Kernel mELM Dilation: dilation
-        - Kernel mELM Erosion: erosion
-        - Kernel Fuzzy-Erosion: fuzzy-erosion or fuzzy_erosion
-        - Kernel Fuzzy-Dilation: fuzzy-dilation ou fuzzy\_dilation
-        - Kernel Bitwise-Erosion: bitwise-erosion ou bitwise\_erosion
-        - Kernel Bitwise-Dilation: bitwise-dilation ou bitwise\_dilation
-        - Kernel Sigmoid: sig or sigmoid
-        - Kernel Sine: sin or sine
-        - Kernel Hard Limit: hardlim
-        - Kernel Triangular Basis Transfer Function: tribas
-        - Kernel Radial Basis Function: radbas
--    -sd: random number generator seed.
--    -v: verbose output.
+<figure>
+  <img src="https://github.com/DejavuForensics/mELM/blob/main/dataset/ELM_7.png" alt="Structure of a repository for prediction using ELM as a regressor.">
+  <figcaption>Figure 7: Structure of a repository for prediction using ELM as a regressor.</figcaption>
+</figure>
 
 
 
