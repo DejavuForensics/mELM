@@ -233,7 +233,7 @@ python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/melm.py) -tal
 -    You can use databases from [Kaggle](https://www.kaggle.com/) or [UCI](https://archive.ics.uci.edu/datasets). Search for repositories on their websites that specialize in predicting and analyzing time series.
 -    In the terminal, use the extreme neural network in didactic repository. Here's an example:
 
-python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/melm.py) -tr [sinc_train](https://github.com/DejavuForensics/mELM/blob/main/dataset/classification/sinc_train) -ts [sinc_test](https://github.com/DejavuForensics/mELM/blob/main/dataset/classification/sinc_test) 
+python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/melm.py) -tr [sinc_train](https://github.com/DejavuForensics/mELM/blob/main/dataset/regression/sinc_train) -ts [sinc_test](https://github.com/DejavuForensics/mELM/blob/main/dataset/regression/sinc_test) 
 -ty 0 -nh 100 -af dilation -v
 
 <figure>
