@@ -23,7 +23,7 @@ https://doi.org/10.1007/s11227-024-06506-x
 
 ## Antivirus for IoT _malware_ from SPARC architectures
 
-python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tall [Antivirus_Dataset_IoT_SPARC_mELM_format.csv](https://github.com/DejavuForensics/IoT_SPARC/blob/main/Antivirus_Dataset_IoT_SPARC_mELM_format.csv) 
+python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/melm.py) -tall [Antivirus_Dataset_IoT_SPARC_mELM_format.csv](https://github.com/DejavuForensics/IoT_SPARC/blob/main/Antivirus_Dataset_IoT_SPARC_mELM_format.csv) 
 -kfold 10 -virusNorm -ty 1 -nh 500 -af dilation -v
 
 ```
@@ -35,7 +35,7 @@ https://doi.org/10.1007/s11416-024-00526-0
 
 ## Antivirus for Citadel _malware_
 
-python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tall [Antivirus_Dataset_PE32_Citadel_mELM_format.csv](https://github.com/DejavuForensics/Citadel/blob/main/Antivirus_Dataset_PE32_Citadel_mELM_format.csv) 
+python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/melm.py) -tall [Antivirus_Dataset_PE32_Citadel_mELM_format.csv](https://github.com/DejavuForensics/Citadel/blob/main/Antivirus_Dataset_PE32_Citadel_mELM_format.csv) 
 -kfold 10 -virusNorm -ty 1 -nh 500 -af dilation -v
 
 ```
@@ -48,7 +48,7 @@ https://doi.org/10.1016/j.jocs.2024.102389.
 ## Antivirus for Java apps
 The database is compressed due to the individual file size delimited by github. Download the compressed file (.zip) to your computer and decompress it before running the extreme neural networks.
 
-python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tall [Antivirus_Dataset_Jar_mELM_format.csv](https://github.com/DejavuForensics/REJAFADA/blob/master/Antivirus_Dataset_Jar_mELM_format.zip) 
+python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/melm.py) -tall [Antivirus_Dataset_Jar_mELM_format.csv](https://github.com/DejavuForensics/REJAFADA/blob/master/Antivirus_Dataset_Jar_mELM_format.zip) 
 -kfold 10 -virusNorm -ty 1 -nh 500 -af dilation -v
 
 ```
@@ -60,7 +60,7 @@ https://doi.org/10.1038/s41598-022-05921-5
 
 ## Antivirus for PHP apps
 
-python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tall [Antivirus_Dataset_PHP_batch_1_mELM_format](https://github.com/DejavuForensics/PAEMAL/blob/master/Antivirus_Dataset_PHP_batch_1_mELM_format.csv) 
+python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/melm.py) -tall [Antivirus_Dataset_PHP_batch_1_mELM_format](https://github.com/DejavuForensics/PAEMAL/blob/master/Antivirus_Dataset_PHP_batch_1_mELM_format.csv) 
 -kfold 10 -virusNorm -ty 1 -nh 500 -af dilation -v
 
 ```
@@ -73,7 +73,7 @@ https://doi.org/10.1007/s00500-022-07447-4
 ## Antivirus for JavaScript apps
 The database is compressed due to the individual file size delimited by github. Download the compressed file (.zip) to your computer and decompress it before running the extreme neural networks.
 
-python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tall [Antivirus_Dataset_JavaScript_mELM_format.csv](
+python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/melm.py) -tall [Antivirus_Dataset_JavaScript_mELM_format.csv](
 https://github.com/DejavuForensics/MARADJS/blob/master/Antivirus_Dataset_JavaScript_mELM_format.zip) 
 -kfold 10 -virusNorm -ty 1 -nh 500 -af dilation -v
 
@@ -199,7 +199,7 @@ Cross-validation is a statistical technique. Researchers use it to assess the pe
 - At the end of learning (training), the ELM neural network will be capable of generalization. The ELM will classify the unseen sample as either class (1.0) or counter-class (0.0). An unseen sample refers to a sample not presented during training.
 -    In the terminal, use the extreme neural network in didactic repository. Here's an example:
    
-python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tr [diabetes_train](https://github.com/DejavuForensics/mELM/blob/main/dataset/classification/diabetes_train) -ts [diabetes_test](https://github.com/DejavuForensics/mELM/blob/main/dataset/classification/diabetes_test)  -ty 1 -virusNorm -nh 100 -af dilation -v
+python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/melm.py) -tr [diabetes_train](https://github.com/DejavuForensics/mELM/blob/main/dataset/classification/diabetes_train) -ts [diabetes_test](https://github.com/DejavuForensics/mELM/blob/main/dataset/classification/diabetes_test)  -ty 1 -virusNorm -nh 100 -af dilation -v
 
 <figure>
   <img src="https://github.com/DejavuForensics/mELM/blob/main/dataset/ELM_5.png" alt="Structure of a pattern recognition repository for the use of ELM as a classifier.">
@@ -214,7 +214,7 @@ python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py)
 - **More columns**: the input neurons in the database used correspond to the repertoire of instructions, the calls to the operating system (_syscall_) and the dependencies of the suspect application. In the dataset in figure 6, there are 430 input neurons. For example, in the first sample, the first neuron corresponds to the instruction 'aaa' and has a value of 0.
 - In the terminal, use the extreme neural network in professional repository. Here's an example:
   
-python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tall [Antivirus_Dataset_PE32_Citadel_mELM_format.csv](https://github.com/DejavuForensics/Citadel/blob/main/Antivirus_Dataset_PE32_Citadel_mELM_format.csv) 
+python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/melm.py) -tall [Antivirus_Dataset_PE32_Citadel_mELM_format.csv](https://github.com/DejavuForensics/Citadel/blob/main/Antivirus_Dataset_PE32_Citadel_mELM_format.csv) 
 -kfold 10 -ty 1 -virusNorm -nh 500 -af dilation -v
 
 <figure>
@@ -233,7 +233,7 @@ python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py)
 -    You can use databases from [Kaggle](https://www.kaggle.com/) or [UCI](https://archive.ics.uci.edu/datasets). Search for repositories on their websites that specialize in predicting and analyzing time series.
 -    In the terminal, use the extreme neural network in didactic repository. Here's an example:
 
-python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/mELM/melm.py) -tr [sinc_train](https://github.com/DejavuForensics/mELM/blob/main/dataset/classification/sinc_train) -ts [sinc_test](https://github.com/DejavuForensics/mELM/blob/main/dataset/classification/sinc_test) 
+python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/melm.py) -tr [sinc_train](https://github.com/DejavuForensics/mELM/blob/main/dataset/classification/sinc_train) -ts [sinc_test](https://github.com/DejavuForensics/mELM/blob/main/dataset/classification/sinc_test) 
 -virusNorm -ty 0 -nh 100 -af dilation -v
 
 <figure>
