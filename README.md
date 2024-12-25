@@ -234,7 +234,7 @@ python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/melm.py) -tal
 -    In the terminal, use the extreme neural network in didactic repository. Here's an example:
 
 python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/melm.py) -tr [sinc_train](https://github.com/DejavuForensics/mELM/blob/main/dataset/classification/sinc_train) -ts [sinc_test](https://github.com/DejavuForensics/mELM/blob/main/dataset/classification/sinc_test) 
--virusNorm -ty 0 -nh 100 -af dilation -v
+-ty 0 -nh 100 -af dilation -v
 
 <figure>
   <img src="https://github.com/DejavuForensics/mELM/blob/main/dataset/ELM_7.png" alt="Structure of a repository for prediction using ELM as a regressor.">
