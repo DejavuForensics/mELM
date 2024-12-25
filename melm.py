@@ -1,7 +1,7 @@
 """
 Code developed by:
 
-Prof. Dr. Sidney Lima
+Prof. Dr. Sidney Marlon Lopes de Lima
 Federal University of Pernambuco
 Department of Electronics and Systems
 """
