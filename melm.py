@@ -255,8 +255,6 @@ def mElmLearning(train_data, test_data,execution,Elm_Type,NumberofHiddenNeurons,
 		#   Calculate training accuracy (RMSE) for regression case
 		TrainingAccuracy = np.square(np.subtract(T, Y)).mean()
 		TrainingAccuracy = round(TrainingAccuracy, 6) 
-		print('.........................................')
-		print('Training RMSE (Root Mean-Square Error): ' + str(TrainingAccuracy)+' ( ' + str(np.size(Y,0)) + ' samples) (regression)')
 	del(H)
 	
 	if verbose: print ('Calculate the output of testing input')  
@@ -276,6 +274,9 @@ def mElmLearning(train_data, test_data,execution,Elm_Type,NumberofHiddenNeurons,
 		#   Calculate testing accuracy (RMSE) for regression case
 		TestingAccuracy = np.square(np.subtract(TVT, TY)).mean()
 		TestingAccuracy = round(TestingAccuracy, 6) 
+		if kfold: print('..................k: '+ str(execution) +', k-fold: ' + str(kfold) + '............................')
+		else: print('....................................................................')
+		print('Training RMSE (Root Mean-Square Error): ' + str(TrainingAccuracy)+' ( ' + str(np.size(Y,0)) + ' samples) (regression)')
 		print('Testing RMSE (Root Mean-Square Error): ' + str(TestingAccuracy)+' ( ' + str(np.size(TY,0)) + ' samples) (regression)')
 		print('Training Time: ' + str(round(TrainingTime,2)) + ' sec.')
 		print('Testing Time: ' + str(round(TestingTime,2)) + ' sec.')
@@ -550,4 +551,3 @@ if __name__ == "__main__":
 	ff = melm()
 	ff.main(opts[0], opts[1], opts[2], opts[3], opts[4], opts[5], opts[6], opts[7], opts[8], opts[9], opts[10])
 #========================================================================
-
