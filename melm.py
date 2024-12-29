@@ -65,7 +65,7 @@ class melm():
 			if kfold is False:
 				peace_train = round(0.9*np.size(samples_index,0))		#% 		90% to train
 				train_samples_index = samples_index[0: peace_train]
-				test_samples_index = samples_index[peace_train+1: np.size(all_data,0)-1]
+				test_samples_index = samples_index[peace_train: np.size(all_data,0)]
 				train_data =  all_data[train_samples_index]
 				test_data = all_data[test_samples_index]
 				del(train_samples_index)
