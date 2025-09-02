@@ -10,7 +10,7 @@ python melmParameters.py -tr treino.csv -ts teste.csv -ty 1 -nh 100 -af sigmoid
 
 python melmParameters.py -tall dados.csv -ty 1 -nh 50,100,200 -af sigmoid,linear,radbas -kfold 10
 
-    • -tall dados.csv → arquivo único (com todas as amostras)
+    • -tall dados.csv → arquivo único (com todas as amostras) subistituir o dados.csv  pelo nome do seu csv que vai estar an mesma pasta do script
     • -ty 1 → classificação (0 para regressão)
     • -nh 50,100,200 → vai testar 3 valores de neurônios ocultos
     • -af sigmoid,linear,radbas → vai testar 3 ativações diferentes
