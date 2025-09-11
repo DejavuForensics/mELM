@@ -175,6 +175,19 @@ python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/mel
 
 # Usage in distinct antiviruses
 
+## Antivirus for malicious Google Chrome extensions
+
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antivirus_Dataset_GoogleChromeExtension_mELM_format.csv](https://github.com/DejavuForensics/IoT_ARM/blob/main/Antivirus_Dataset_GoogleChromeExtension_mELM_format.csv) -kfold 10 -ty 1 -virusNorm -nh 500 -af all -v
+
+
+```
+Gabriela Leite Pereira, Leonardo Silvino Brito, Sidney Marlon Lopes de Lima,
+Antivirus applied to Google Chrome's extension malware,
+Computers & Security, 156, 104465 (2025).
+https://doi.org/10.1016/j.cose.2025.104465
+```
+
+
 ## Antivirus for IoT _malware_ from ARM architectures
 
 python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antivirus_Dataset_IoT_SPARC_melmParameters_format.csv](https://github.com/DejavuForensics/IoT_ARM/blob/main/Antivirus_Dataset_IoT_ARM_melmParameters_format.csv) -kfold 10 -ty 1 -virusNorm -nh 500 -af all -v
