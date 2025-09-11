@@ -8,7 +8,7 @@ In the terminal, install the virtual environment.
 sudo su
 python -m venv venv
 source venv/bin/activate
-```b
+```
 
 In the terminal, install requirements.
 ```
