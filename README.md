@@ -54,8 +54,8 @@ The kernels melmParameterss are successful because they can model any decision b
 
 
 <figure>
-  <img src="https://github.com/DejavuForensics/mELM/tree/main/dataset/ELM_2.png" alt="Unsuccessful performances of _kernel_ Linear on non-linearly separable datasets.">
-  <figcaption>Figure 2: Unsuccessful performances of _kernel_ Linear on non-linearly separable datasets.</figcaption>
+  <img src="https://raw.githubusercontent.com/DejavuForensics/mELM/main/dataset/ELM_2.png" alt="Unsuccessful performance of linear kernel on non-linearly separable datasets.">
+  <figcaption>Figure 2: Unsuccessful performance of linear kernel on non-linearly separable datasets.</figcaption>
 </figure>
 
 <figure>
