@@ -1,18 +1,25 @@
-# mELM
+# melmParameters
 Morphological Extreme Learning Machine
   
 ### Follow the instruction:
 
-In the terminal, install _scikit-learn_.
+In the terminal, install the virtual environment.
 ```
-pip install scikit-learn
+sudo su
+python -m venv venv
+source venv/bin/activate
+```b
+
+In the terminal, install requirements.
+```
+pip install -r requirements.txt
 ```
 
 # Usage in distinct antiviruses
 
 ## Antivirus for IoT _malware_ from ARM architectures
 
-python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/melm.py) -tall [Antivirus_Dataset_IoT_SPARC_mELM_format.csv](https://github.com/DejavuForensics/IoT_ARM/blob/main/Antivirus_Dataset_IoT_ARM_mELM_format.csv) -kfold 10 -ty 1 -virusNorm -nh 500 -af dilation -v
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antivirus_Dataset_IoT_SPARC_melmParameters_format.csv](https://github.com/DejavuForensics/IoT_ARM/blob/main/Antivirus_Dataset_IoT_ARM_melmParameters_format.csv) -kfold 10 -ty 1 -virusNorm -nh 500 -af all -v
 
 ```
 Tavares-Silva, S.H.M., Lopes-Lima, S.M., Paranhos-Pinheiro, R. et al.
@@ -23,8 +30,8 @@ https://doi.org/10.1007/s11227-024-06506-x
 
 ## Antivirus for IoT _malware_ from SPARC architectures
 
-python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/melm.py) -tall [Antivirus_Dataset_IoT_SPARC_mELM_format.csv](https://github.com/DejavuForensics/IoT_SPARC/blob/main/Antivirus_Dataset_IoT_SPARC_mELM_format.csv) 
--kfold 10 -virusNorm -ty 1 -nh 500 -af dilation -v
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antivirus_Dataset_IoT_SPARC_melmParameters_format.csv](https://github.com/DejavuForensics/IoT_SPARC/blob/main/Antivirus_Dataset_IoT_SPARC_melmParameters_format.csv) 
+-kfold 10 -virusNorm -ty 1 -nh 500 -af all -v
 
 ```
 Pinheiro Henriques de Araújo, I., Mariano Santiago de Abreu, L., Henrique Mendes Tavares Silva, S. et al.
@@ -35,8 +42,8 @@ https://doi.org/10.1007/s11416-024-00526-0
 
 ## Antivirus for Citadel _malware_
 
-python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/melm.py) -tall [Antivirus_Dataset_PE32_Citadel_mELM_format.csv](https://github.com/DejavuForensics/Citadel/blob/main/Antivirus_Dataset_PE32_Citadel_mELM_format.csv) 
--kfold 10 -virusNorm -ty 1 -nh 500 -af dilation -v
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antivirus_Dataset_PE32_Citadel_melmParameters_format.csv](https://github.com/DejavuForensics/Citadel/blob/main/Antivirus_Dataset_PE32_Citadel_melmParameters_format.csv) 
+-kfold 10 -virusNorm -ty 1 -nh 500 -af all -v
 
 ```
 Carlos Henrique Macedo dos Santos, Sidney Marlon Lopes de Lima,
@@ -48,8 +55,8 @@ https://doi.org/10.1016/j.jocs.2024.102389.
 ## Antivirus for Java apps
 The database is compressed due to the individual file size delimited by github. Download the compressed file (.zip) to your computer and decompress it before running the extreme neural networks.
 
-python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/melm.py) -tall [Antivirus_Dataset_Jar_mELM_format.csv](https://github.com/DejavuForensics/REJAFADA/blob/master/Antivirus_Dataset_Jar_mELM_format.zip) 
--kfold 10 -virusNorm -ty 1 -nh 500 -af dilation -v
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antivirus_Dataset_Jar_melmParameters_format.csv](https://github.com/DejavuForensics/REJAFADA/blob/master/Antivirus_Dataset_Jar_melmParameters_format.zip) 
+-kfold 10 -virusNorm -ty 1 -nh 500 -af all -v
 
 ```
 Pinheiro, R.P., Lima, S.M.L., Souza, D.M. et al. 
@@ -60,8 +67,8 @@ https://doi.org/10.1038/s41598-022-05921-5
 
 ## Antivirus for PHP apps
 
-python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/melm.py) -tall [Antivirus_Dataset_PHP_batch_1_mELM_format](https://github.com/DejavuForensics/PAEMAL/blob/master/Antivirus_Dataset_PHP_batch_1_mELM_format.csv) 
--kfold 10 -virusNorm -ty 1 -nh 500 -af dilation -v
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antivirus_Dataset_PHP_batch_1_melmParameters_format](https://github.com/DejavuForensics/PAEMAL/blob/master/Antivirus_Dataset_PHP_batch_1_melmParameters_format.csv) 
+-kfold 10 -virusNorm -ty 1 -nh 500 -af all -v
 
 ```
 Lima, S.M.L., Silva, S.H.M.T., Pinheiro, R.P. et al.
@@ -73,9 +80,9 @@ https://doi.org/10.1007/s00500-022-07447-4
 ## Antivirus for JavaScript apps
 The database is compressed due to the individual file size delimited by github. Download the compressed file (.zip) to your computer and decompress it before running the extreme neural networks.
 
-python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/melm.py) -tall [Antivirus_Dataset_JavaScript_mELM_format.csv](
-https://github.com/DejavuForensics/MARADJS/blob/master/Antivirus_Dataset_JavaScript_mELM_format.zip) 
--kfold 10 -virusNorm -ty 1 -nh 500 -af dilation -v
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antivirus_Dataset_JavaScript_melmParameters_format.csv](
+https://github.com/DejavuForensics/MARADJS/blob/master/Antivirus_Dataset_JavaScript_melmParameters_format.zip) 
+-kfold 10 -virusNorm -ty 1 -nh 500 -af all -v
 
 ```
 de Lima, S.M.L., Souza, D.M., Pinheiro, R.P. et al. 
@@ -96,12 +103,12 @@ Kernels form the basis for learning ELMs networks. The kernels are mathematical 
 
 Kernels are mathematical functions used as a learning method for neural networks. Kernel-based learning allows for a non-linear mapping of data without increasing adjustable parameters. But kernels can have limitations. A linear kernel can't solve a non-linearly separable problem, like a sine distribution. Whereas a sinusoidal kernel may be able to solve a problem as long as it is separable by a sine function. Finding an optimized kernel is a big challenge in artificial neural networks. The kernel helps determine the decision boundary for different classes in an application. 
 
-We introduce mELMs. They are ELMs with hidden layer kernels inspired by image processing operators. We call these operators morphological Erosion and Dilation. We claim that morphological kernels can adapt to any boundary decision. Mathematical morphology studies the shapes of objects in images using mathematical theory. It looks at how sets intersect and join together. Morphological operations detect the shapes of objects in images.  The decision frontier of a neural network can be seen as an n-dimensional image. In this case, n represents the number of extracted features.
-The decision frontier of a neural network can be seen as an _n_-dimensional image. In this case, _n_ represents the number of extracted features. mELMs can naturally identify and represent the n-dimensional areas associated with various classes.
+We introduce melmParameterss. They are ELMs with hidden layer kernels inspired by image processing operators. We call these operators morphological Erosion and Dilation. We claim that morphological kernels can adapt to any boundary decision. Mathematical morphology studies the shapes of objects in images using mathematical theory. It looks at how sets intersect and join together. Morphological operations detect the shapes of objects in images.  The decision frontier of a neural network can be seen as an n-dimensional image. In this case, n represents the number of extracted features.
+The decision frontier of a neural network can be seen as an _n_-dimensional image. In this case, _n_ represents the number of extracted features. melmParameterss can naturally identify and represent the n-dimensional areas associated with various classes.
 
 Mathematical Morphology is a theory used in digital image processing to process nonlinearly. Various applications like object detection, segmentation, and feature extraction use Mathematical Morphology. Morphology is based on shape transformations that preserve the inclusion relationships of objects. There are two fundamental morphological operations: Erosion and Dilation. Mathematical Morphology is a constructive theory. It builds operations on Erosions and Dilations.
 
-Fig. 1 (b) and Fig. (c) show the result of the Erosion and Dilation operation on the same original image: Fig. 1 (a). In the eroded image, the target object is "withered". In the dilated image, the target object is dilated, as the name suggests. The Dilation kernel expands the region connected to the target class. An analogy is drawn between image processing operations and authorial mELM networks. The Dilation kernel expands the region attached to the target class (e.g. malware). In turn, the Erosion kernel expands the region belonging to the counter-class (e.g. benign).
+Fig. 1 (b) and Fig. (c) show the result of the Erosion and Dilation operation on the same original image: Fig. 1 (a). In the eroded image, the target object is "withered". In the dilated image, the target object is dilated, as the name suggests. The Dilation kernel expands the region connected to the target class. An analogy is drawn between image processing operations and authorial melmParameters networks. The Dilation kernel expands the region attached to the target class (e.g. malware). In turn, the Erosion kernel expands the region belonging to the counter-class (e.g. benign).
 
 One major difficulty in artificial neural networks is finding the best kernel for a specific task. ELM neural networks can solve a linearly separable problem using a Linear kernel, as seen in (Fig.). 2 (a). The Sigmoid, RBF, and Sinusoid kernels can solve problems that can be separated by Sigmoid, Radial, and Sinusoidal functions, as shown in Fig. 2 (b), Fig. 2 (c) and Fig. 2 (d), respectively.
 
@@ -111,30 +118,30 @@ Studying different kernel types is computationally expensive. It requires cross-
 
 To see a counter-example, look at how the Linear kernel is used with the Sigmoid and Sine distributions in Fig. 2 (a) and Fig. 2 (b), respectively. The classification accuracies shown in Fig. 2 (a) and Fig. 2 (b) are 78.71% and 73.00%, respectively. The Linear kernel doesn't clearly show the decision boundaries of Sigmoid and Sinusoid distributions.
 
-Fig. 3 (a), Fig. 3 (b), Fig. 3 (c) and Fig. 3 (d) show the performance of the mELM Erosion kernel on the Linear, Sigmoid, Radial and Sinusoid distributions. The respective accuracies are 100%, 93.07%, 98.18% and 99.50%.  Fig. 4(a), Fig. 4 (b), Fig. 4 (c) and Fig. 4 (d) show the performance of the mELM Dilation kernel on the Linear, Sigmoidal, Radial and Sinusoidal distributions. The respective accuracies of 100%, 95.05%, 98.18% and 99.50%. We can see that the mELMs accurately map various distributions for different problems. It should be noted that the two attributes are normalized to the same lower and upper limit.
+Fig. 3 (a), Fig. 3 (b), Fig. 3 (c) and Fig. 3 (d) show the performance of the melmParameters Erosion kernel on the Linear, Sigmoid, Radial and Sinusoid distributions. The respective accuracies are 100%, 93.07%, 98.18% and 99.50%.  Fig. 4(a), Fig. 4 (b), Fig. 4 (c) and Fig. 4 (d) show the performance of the melmParameters Dilation kernel on the Linear, Sigmoidal, Radial and Sinusoidal distributions. The respective accuracies of 100%, 95.05%, 98.18% and 99.50%. We can see that the melmParameterss accurately map various distributions for different problems. It should be noted that the two attributes are normalized to the same lower and upper limit.
 
-The kernels mELMs are successful because they can model any decision boundary. They do not follow conventional geometric surfaces like ellipses and hyperbolas. The mELMs kernels map the decision boundary in _n_-dimensional. The coordinates are based on training samples. _n_ represents the number of extracted features. mELMs can detect and model different classes by using Mathematical Morphology. It detects the shapes of bodies in images.
+The kernels melmParameterss are successful because they can model any decision boundary. They do not follow conventional geometric surfaces like ellipses and hyperbolas. The melmParameterss kernels map the decision boundary in _n_-dimensional. The coordinates are based on training samples. _n_ represents the number of extracted features. melmParameterss can detect and model different classes by using Mathematical Morphology. It detects the shapes of bodies in images.
 
 <figure>
-  <img src="https://github.com/DejavuForensics/mELM/blob/main/dataset/ELM_1.png" alt="Successful performances of the _kernels_ compatible with the datasets.">
+  <img src="https://github.com/DejavuForensics/melmParameters/blob/main/dataset/ELM_1.png" alt="Successful performances of the _kernels_ compatible with the datasets.">
   <figcaption>Figure 1: Successful performances of the _kernels_ compatible with the datasets.</figcaption>
 </figure>
 
 
 
 <figure>
-  <img src="https://github.com/DejavuForensics/mELM/blob/main/dataset/ELM_1.png" alt="Unsuccessful performances of _kernel_ Linear on non-linearly separable datasets.">
+  <img src="https://github.com/DejavuForensics/melmParameters/blob/main/dataset/ELM_1.png" alt="Unsuccessful performances of _kernel_ Linear on non-linearly separable datasets.">
   <figcaption>Figure 2: Unsuccessful performances of _kernel_ Linear on non-linearly separable datasets.</figcaption>
 </figure>
 
 <figure>
-  <img src="https://github.com/DejavuForensics/mELM/blob/main/dataset/ELM_3.png" alt="Successful performances of the mELM Erosion kernel in multiple datasets.">
-  <figcaption>Figure 3: Successful performances of the mELM Erosion kernel in multiple datasets.</figcaption>
+  <img src="https://github.com/DejavuForensics/melmParameters/blob/main/dataset/ELM_3.png" alt="Successful performances of the melmParameters Erosion kernel in multiple datasets.">
+  <figcaption>Figure 3: Successful performances of the melmParameters Erosion kernel in multiple datasets.</figcaption>
 </figure>
 
 <figure>
-  <img src="https://github.com/DejavuForensics/mELM/blob/main/dataset/ELM_4.png" alt="Successful performances of the mELM Dilation kernel in multiple datasets.">
-  <figcaption>Figure 4: Successful performances of the mELM Dilation kernel in multiple datasets.</figcaption>
+  <img src="https://github.com/DejavuForensics/melmParameters/blob/main/dataset/ELM_4.png" alt="Successful performances of the melmParameters Dilation kernel in multiple datasets.">
+  <figcaption>Figure 4: Successful performances of the melmParameters Dilation kernel in multiple datasets.</figcaption>
 </figure>
 
 ## Prediction
@@ -176,8 +183,8 @@ Cross-validation is a statistical technique. Researchers use it to assess the pe
 -    -nh: number of neurons in the hidden layer.
 -    -af: activation function.
         - Kernel Linear (default): linear
-        - Kernel mELM Dilation: dilation
-        - Kernel mELM Erosion: erosion
+        - Kernel melmParameters Dilation: dilation
+        - Kernel melmParameters Erosion: erosion
         - Kernel Fuzzy-Erosion: fuzzy-erosion or fuzzy_erosion
         - Kernel Fuzzy-Dilation: fuzzy-dilation ou fuzzy\_dilation
         - Kernel Bitwise-Erosion: bitwise-erosion ou bitwise\_erosion
@@ -199,26 +206,26 @@ Cross-validation is a statistical technique. Researchers use it to assess the pe
 - At the end of learning (training), the ELM neural network will be capable of generalization. The ELM will classify the unseen sample as either class (1.0) or counter-class (0.0). An unseen sample refers to a sample not presented during training.
 -    In the terminal, use the extreme neural network in didactic repository. Here's an example:
    
-python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/melm.py) -tr [diabetes_train](https://github.com/DejavuForensics/mELM/blob/main/dataset/classification/diabetes_train) -ts [diabetes_test](https://github.com/DejavuForensics/mELM/blob/main/dataset/classification/diabetes_test)  -ty 1 -virusNorm -nh 100 -af dilation -v
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tr [diabetes_train](https://github.com/DejavuForensics/melmParameters/blob/main/dataset/classification/diabetes_train) -ts [diabetes_test](https://github.com/DejavuForensics/melmParameters/blob/main/dataset/classification/diabetes_test)  -ty 1 -virusNorm -nh 100 -af dilation -v
 
 <figure>
-  <img src="https://github.com/DejavuForensics/mELM/blob/main/dataset/ELM_5.png" alt="Structure of a pattern recognition repository for the use of ELM as a classifier.">
+  <img src="https://github.com/DejavuForensics/melmParameters/blob/main/dataset/ELM_5.png" alt="Structure of a pattern recognition repository for the use of ELM as a classifier.">
   <figcaption>Figure 5: Structure of a pattern recognition repository for the use of ELM as a classifier.</figcaption>
 </figure>
 
 ### Authorial repository for pattern recognition:
 
--	In the path **dataset/classification/Antivirus_Dataset_PE32_Citadel_mELM_format.csv**, you can see the structure of the repository as shown in Fig. 6.
+-	In the path **dataset/classification/Antivirus_Dataset_PE32_Citadel_melmParameters_format.csv**, you can see the structure of the repository as shown in Fig. 6.
 - **First column**: popular name of the file that makes up the dataset.
 - **Second column**: corresponds to the output attribute of the repository. 1; the sample (line) belongs to the class (_citadel_ _malware_). 0; the sample (line) belongs to the counter-class.
 - **More columns**: the input neurons in the database used correspond to the repertoire of instructions, the calls to the operating system (_syscall_) and the dependencies of the suspect application. In the dataset in figure 6, there are 430 input neurons. For example, in the first sample, the first neuron corresponds to the instruction 'aaa' and has a value of 0.
 - In the terminal, use the extreme neural network in professional repository. Here's an example:
   
-python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/melm.py) -tall [Antivirus_Dataset_PE32_Citadel_mELM_format.csv](https://github.com/DejavuForensics/Citadel/blob/main/Antivirus_Dataset_PE32_Citadel_mELM_format.csv) 
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antivirus_Dataset_PE32_Citadel_melmParameters_format.csv](https://github.com/DejavuForensics/Citadel/blob/main/Antivirus_Dataset_PE32_Citadel_melmParameters_format.csv) 
 -kfold 10 -ty 1 -virusNorm -nh 500 -af dilation -v
 
 <figure>
-  <img src="https://github.com/DejavuForensics/mELM/blob/main/dataset/ELM_6.png" alt="Structure of a repository for pattern recognition of _malware_ with a view to using ELM as a classifier.">
+  <img src="https://github.com/DejavuForensics/melmParameters/blob/main/dataset/ELM_6.png" alt="Structure of a repository for pattern recognition of _malware_ with a view to using ELM as a classifier.">
   <figcaption>Figure 6: Structure of a repository for pattern recognition of _malware_ with a view to using ELM as a classifier.</figcaption>
 </figure>
 
@@ -229,15 +236,15 @@ python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/melm.py) -tal
     - **First column**: floating value to be estimated.
     - **Second column**: input attribute (neuron). This is a didactic and hypothetical database. A real application could have hundreds of input neurons.
 - At the end of learning (training), the ELM neural network will be capable of prediction. The ELM will estimate a floating value from a given input neuron. 
--    The "mELM" package has a didactic dataset for prediction. It follows the methodology of the creators of ELM. However the authorial structure allows people to experiment with databases in real-world situations. These follow the structure shown in Figure \ref{fig:8_71}. In prediction problems, the second column must be a floating value. We only use classes in pattern recognition.
+-    The "melmParameters" package has a didactic dataset for prediction. It follows the methodology of the creators of ELM. However the authorial structure allows people to experiment with databases in real-world situations. These follow the structure shown in Figure \ref{fig:8_71}. In prediction problems, the second column must be a floating value. We only use classes in pattern recognition.
 -    You can use databases from [Kaggle](https://www.kaggle.com/) or [UCI](https://archive.ics.uci.edu/datasets). Search for repositories on their websites that specialize in predicting and analyzing time series.
 -    In the terminal, use the extreme neural network in didactic repository. Here's an example:
 
-python [melm.py](https://github.com/DejavuForensics/mELM/blob/main/melm.py) -tr [sinc_train](https://github.com/DejavuForensics/mELM/blob/main/dataset/regression/sinc_train) -ts [sinc_test](https://github.com/DejavuForensics/mELM/blob/main/dataset/regression/sinc_test) 
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tr [sinc_train](https://github.com/DejavuForensics/melmParameters/blob/main/dataset/regression/sinc_train) -ts [sinc_test](https://github.com/DejavuForensics/melmParameters/blob/main/dataset/regression/sinc_test) 
 -ty 0 -nh 100 -af dilation -v
 
 <figure>
-  <img src="https://github.com/DejavuForensics/mELM/blob/main/dataset/ELM_7.png" alt="Structure of a repository for prediction using ELM as a regressor.">
+  <img src="https://github.com/DejavuForensics/melmParameters/blob/main/dataset/ELM_7.png" alt="Structure of a repository for prediction using ELM as a regressor.">
   <figcaption>Figure 7: Structure of a repository for prediction using ELM as a regressor.</figcaption>
 </figure>
 
