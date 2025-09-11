@@ -15,82 +15,6 @@ In the terminal, install requirements.
 pip install -r requirements.txt
 ```
 
-# Usage in distinct antiviruses
-
-## Antivirus for IoT _malware_ from ARM architectures
-
-python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antivirus_Dataset_IoT_SPARC_melmParameters_format.csv](https://github.com/DejavuForensics/IoT_ARM/blob/main/Antivirus_Dataset_IoT_ARM_melmParameters_format.csv) -kfold 10 -ty 1 -virusNorm -nh 500 -af all -v
-
-```
-Tavares-Silva, S.H.M., Lopes-Lima, S.M., Paranhos-Pinheiro, R. et al.
-Antivirus solution to IoT malware detection with authorial next-generation sandbox.
-The Journal of Supercomputing 81, 151 (2025).
-https://doi.org/10.1007/s11227-024-06506-x
-```
-
-## Antivirus for IoT _malware_ from SPARC architectures
-
-python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antivirus_Dataset_IoT_SPARC_melmParameters_format.csv](https://github.com/DejavuForensics/IoT_SPARC/blob/main/Antivirus_Dataset_IoT_SPARC_melmParameters_format.csv) 
--kfold 10 -virusNorm -ty 1 -nh 500 -af all -v
-
-```
-Pinheiro Henriques de Araújo, I., Mariano Santiago de Abreu, L., Henrique Mendes Tavares Silva, S. et al.
-Antimalware applied to IoT malware detection based on softcore processor endowed with authorial sandbox.
-Journal of Computer Virology and Hacking Techniques 20, 729–749 (2024).
-https://doi.org/10.1007/s11416-024-00526-0
-```
-
-## Antivirus for Citadel _malware_
-
-python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antivirus_Dataset_PE32_Citadel_melmParameters_format.csv](https://github.com/DejavuForensics/Citadel/blob/main/Antivirus_Dataset_PE32_Citadel_melmParameters_format.csv) 
--kfold 10 -virusNorm -ty 1 -nh 500 -af all -v
-
-```
-Carlos Henrique Macedo dos Santos, Sidney Marlon Lopes de Lima,
-XAI-driven antivirus in pattern identification of citadel malware,
-Journal of Computational Science, 82 (2024): 102389.
-https://doi.org/10.1016/j.jocs.2024.102389.
-```
-
-## Antivirus for Java apps
-The database is compressed due to the individual file size delimited by github. Download the compressed file (.zip) to your computer and decompress it before running the extreme neural networks.
-
-python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antivirus_Dataset_Jar_melmParameters_format.csv](https://github.com/DejavuForensics/REJAFADA/blob/master/Antivirus_Dataset_Jar_melmParameters_format.zip) 
--kfold 10 -virusNorm -ty 1 -nh 500 -af all -v
-
-```
-Pinheiro, R.P., Lima, S.M.L., Souza, D.M. et al. 
-Antivirus applied to JAR malware detection based on runtime behaviors. 
-Scientific Reports - Nature Research 12, 1945 (2022). 
-https://doi.org/10.1038/s41598-022-05921-5
-```
-
-## Antivirus for PHP apps
-
-python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antivirus_Dataset_PHP_batch_1_melmParameters_format](https://github.com/DejavuForensics/PAEMAL/blob/master/Antivirus_Dataset_PHP_batch_1_melmParameters_format.csv) 
--kfold 10 -virusNorm -ty 1 -nh 500 -af all -v
-
-```
-Lima, S.M.L., Silva, S.H.M.T., Pinheiro, R.P. et al.
-Next-generation antivirus endowed with web-server Sandbox applied to audit fileless attack.
-Soft Computing 27, 1471–1491 (2023).
-https://doi.org/10.1007/s00500-022-07447-4
-```
-
-## Antivirus for JavaScript apps
-The database is compressed due to the individual file size delimited by github. Download the compressed file (.zip) to your computer and decompress it before running the extreme neural networks.
-
-python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antivirus_Dataset_JavaScript_melmParameters_format.csv](
-https://github.com/DejavuForensics/MARADJS/blob/master/Antivirus_Dataset_JavaScript_melmParameters_format.zip) 
--kfold 10 -virusNorm -ty 1 -nh 500 -af all -v
-
-```
-de Lima, S.M.L., Souza, D.M., Pinheiro, R.P. et al. 
-Next-generation antivirus for JavaScript malware detection based on dynamic features. 
-Knowledge and Information Systems 66, 1337–1370 (2024).
-https://doi.org/10.1007/s10115-023-01978-4
-```
-
 ## Theoretical Background
 
 Neural network is a computational intelligence model employed to solve pattern recognition problems. Neural networks can generalize and recognize new data that wasn't taught during training. In backpropagation strategy, adjusting many parameters is necessary to improve neural network performance. 
@@ -249,5 +173,80 @@ python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/mel
 </figure>
 
 
+# Usage in distinct antiviruses
+
+## Antivirus for IoT _malware_ from ARM architectures
+
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antivirus_Dataset_IoT_SPARC_melmParameters_format.csv](https://github.com/DejavuForensics/IoT_ARM/blob/main/Antivirus_Dataset_IoT_ARM_melmParameters_format.csv) -kfold 10 -ty 1 -virusNorm -nh 500 -af all -v
+
+```
+Tavares-Silva, S.H.M., Lopes-Lima, S.M., Paranhos-Pinheiro, R. et al.
+Antivirus solution to IoT malware detection with authorial next-generation sandbox.
+The Journal of Supercomputing 81, 151 (2025).
+https://doi.org/10.1007/s11227-024-06506-x
+```
+
+## Antivirus for IoT _malware_ from SPARC architectures
+
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antivirus_Dataset_IoT_SPARC_melmParameters_format.csv](https://github.com/DejavuForensics/IoT_SPARC/blob/main/Antivirus_Dataset_IoT_SPARC_melmParameters_format.csv) 
+-kfold 10 -virusNorm -ty 1 -nh 500 -af all -v
+
+```
+Pinheiro Henriques de Araújo, I., Mariano Santiago de Abreu, L., Henrique Mendes Tavares Silva, S. et al.
+Antimalware applied to IoT malware detection based on softcore processor endowed with authorial sandbox.
+Journal of Computer Virology and Hacking Techniques 20, 729–749 (2024).
+https://doi.org/10.1007/s11416-024-00526-0
+```
+
+## Antivirus for Citadel _malware_
+
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antivirus_Dataset_PE32_Citadel_melmParameters_format.csv](https://github.com/DejavuForensics/Citadel/blob/main/Antivirus_Dataset_PE32_Citadel_melmParameters_format.csv) 
+-kfold 10 -virusNorm -ty 1 -nh 500 -af all -v
+
+```
+Carlos Henrique Macedo dos Santos, Sidney Marlon Lopes de Lima,
+XAI-driven antivirus in pattern identification of citadel malware,
+Journal of Computational Science, 82 (2024): 102389.
+https://doi.org/10.1016/j.jocs.2024.102389.
+```
+
+## Antivirus for Java apps
+The database is compressed due to the individual file size delimited by github. Download the compressed file (.zip) to your computer and decompress it before running the extreme neural networks.
+
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antivirus_Dataset_Jar_melmParameters_format.csv](https://github.com/DejavuForensics/REJAFADA/blob/master/Antivirus_Dataset_Jar_melmParameters_format.zip) 
+-kfold 10 -virusNorm -ty 1 -nh 500 -af all -v
+
+```
+Pinheiro, R.P., Lima, S.M.L., Souza, D.M. et al. 
+Antivirus applied to JAR malware detection based on runtime behaviors. 
+Scientific Reports - Nature Research 12, 1945 (2022). 
+https://doi.org/10.1038/s41598-022-05921-5
+```
+
+## Antivirus for PHP apps
+
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antivirus_Dataset_PHP_batch_1_melmParameters_format](https://github.com/DejavuForensics/PAEMAL/blob/master/Antivirus_Dataset_PHP_batch_1_melmParameters_format.csv) 
+-kfold 10 -virusNorm -ty 1 -nh 500 -af all -v
+
+```
+Lima, S.M.L., Silva, S.H.M.T., Pinheiro, R.P. et al.
+Next-generation antivirus endowed with web-server Sandbox applied to audit fileless attack.
+Soft Computing 27, 1471–1491 (2023).
+https://doi.org/10.1007/s00500-022-07447-4
+```
+
+## Antivirus for JavaScript apps
+The database is compressed due to the individual file size delimited by github. Download the compressed file (.zip) to your computer and decompress it before running the extreme neural networks.
+
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antivirus_Dataset_JavaScript_melmParameters_format.csv](
+https://github.com/DejavuForensics/MARADJS/blob/master/Antivirus_Dataset_JavaScript_melmParameters_format.zip) 
+-kfold 10 -virusNorm -ty 1 -nh 500 -af all -v
+
+```
+de Lima, S.M.L., Souza, D.M., Pinheiro, R.P. et al. 
+Next-generation antivirus for JavaScript malware detection based on dynamic features. 
+Knowledge and Information Systems 66, 1337–1370 (2024).
+https://doi.org/10.1007/s10115-023-01978-4
+```
 
 
