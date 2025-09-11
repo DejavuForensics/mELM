@@ -137,22 +137,6 @@ python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/mel
   <figcaption>Figure 5: Structure of a pattern recognition repository for the use of ELM as a classifier.</figcaption>
 </figure>
 
-### Authorial repository for pattern recognition:
-
--	In the path **dataset/classification/Antivirus_Dataset_PE32_Citadel_melmParameters_format.csv**, you can see the structure of the repository as shown in Fig. 6.
-- **First column**: popular name of the file that makes up the dataset.
-- **Second column**: corresponds to the output attribute of the repository. 1; the sample (line) belongs to the class (_citadel_ _malware_). 0; the sample (line) belongs to the counter-class.
-- **More columns**: the input neurons in the database used correspond to the repertoire of instructions, the calls to the operating system (_syscall_) and the dependencies of the suspect application. In the dataset in figure 6, there are 430 input neurons. For example, in the first sample, the first neuron corresponds to the instruction 'aaa' and has a value of 0.
-- In the terminal, use the extreme neural network in professional repository. Here's an example:
-  
-python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antivirus_Dataset_PE32_Citadel_melmParameters_format.csv](https://github.com/DejavuForensics/Citadel/blob/main/Antivirus_Dataset_PE32_Citadel_melmParameters_format.csv) 
--kfold 10 -ty 1 -virusNorm -nh 500 -af dilation -v
-
-<figure>
-  <img src="https://raw.githubusercontent.com/DejavuForensics/mELM/main/dataset/ELM_6.png" alt="Structure of a repository for pattern recognition of _malware_ with a view to using ELM as a classifier.">
-  <figcaption>Figure 6: Structure of a repository for pattern recognition of _malware_ with a view to using ELM as a classifier.</figcaption>
-</figure>
-
 ### Didactic repository for prediction:
 
 -	It is not within the scope of this package to create the database. A third party has already created the learning repository. This structure follows the methodology of the ELM inventors.
@@ -172,6 +156,18 @@ python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/mel
   <figcaption>Figure 7: Structure of a repository for prediction using ELM as a regressor.</figcaption>
 </figure>
 
+### Authorial repository for pattern recognition:
+
+-	In the path **dataset/classification/Antivirus_Dataset_PE32_Citadel_melmParameters_format.csv**, you can see the structure of the repository as shown in Fig. 6.
+- **First column**: popular name of the file that makes up the dataset.
+- **Second column**: corresponds to the output attribute of the repository. 1; the sample (line) belongs to the class (_citadel_ _malware_). 0; the sample (line) belongs to the counter-class.
+- **More columns**: the input neurons in the database used correspond to the repertoire of instructions, the calls to the operating system (_syscall_) and the dependencies of the suspect application. In the dataset in figure 6, there are 430 input neurons. For example, in the first sample, the first neuron corresponds to the instruction 'aaa' and has a value of 0.
+- In the terminal, use the extreme neural network in professional repository. Here's an example:
+
+<figure>
+  <img src="https://raw.githubusercontent.com/DejavuForensics/mELM/main/dataset/ELM_6.png" alt="Structure of a repository for pattern recognition of _malware_ with a view to using ELM as a classifier.">
+  <figcaption>Figure 6: Structure of a repository for pattern recognition of _malware_ with a view to using ELM as a classifier.</figcaption>
+</figure>
 
 # Usage in distinct antiviruses
 
