@@ -47,7 +47,7 @@ Fig. 3 (a), Fig. 3 (b), Fig. 3 (c) and Fig. 3 (d) show the performance of the me
 The kernels melmParameterss are successful because they can model any decision boundary. They do not follow conventional geometric surfaces like ellipses and hyperbolas. The melmParameterss kernels map the decision boundary in _n_-dimensional. The coordinates are based on training samples. _n_ represents the number of extracted features. melmParameterss can detect and model different classes by using Mathematical Morphology. It detects the shapes of bodies in images.
 
 <figure>
-  <img src="https://github.com/DejavuForensics/mELM/tree/main/dataset/ELM_1.png" alt="Successful performances of the _kernels_ compatible with the datasets.">
+  <img src="https://raw.githubusercontent.com/DejavuForensics/mELM/main/dataset/ELM_1.png" alt="Successful performances of the _kernels_ compatible with the datasets.">
   <figcaption>Figure 1: Successful performances of the _kernels_ compatible with the datasets.</figcaption>
 </figure>
 
@@ -59,12 +59,12 @@ The kernels melmParameterss are successful because they can model any decision b
 </figure>
 
 <figure>
-  <img src="https://github.com/DejavuForensics/mELM/tree/main/dataset/ELM_3.png" alt="Successful performances of the melmParameters Erosion kernel in multiple datasets.">
+  <img src="https://raw.githubusercontent.com/DejavuForensics/mELM/main/dataset/ELM_3.png" alt="Successful performances of the melmParameters Erosion kernel in multiple datasets.">
   <figcaption>Figure 3: Successful performances of the melmParameters Erosion kernel in multiple datasets.</figcaption>
 </figure>
 
 <figure>
-  <img src="https://github.com/DejavuForensics/mELM/tree/main/dataset/ELM_4.png" alt="Successful performances of the melmParameters Dilation kernel in multiple datasets.">
+  <img src="https://raw.githubusercontent.com/DejavuForensics/mELM/main/dataset/ELM_4.png" alt="Successful performances of the melmParameters Dilation kernel in multiple datasets.">
   <figcaption>Figure 4: Successful performances of the melmParameters Dilation kernel in multiple datasets.</figcaption>
 </figure>
 
@@ -133,7 +133,7 @@ Cross-validation is a statistical technique. Researchers use it to assess the pe
 python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tr [diabetes_train](https://github.com/DejavuForensics/melmParameters/blob/main/dataset/classification/diabetes_train) -ts [diabetes_test](https://github.com/DejavuForensics/melmParameters/blob/main/dataset/classification/diabetes_test)  -ty 1 -virusNorm -nh 100 -af dilation -v
 
 <figure>
-  <img src="https://github.com/DejavuForensics/mELM/tree/main/dataset/ELM_5.png" alt="Structure of a pattern recognition repository for the use of ELM as a classifier.">
+  <img src="https://raw.githubusercontent.com/DejavuForensics/mELM/main/dataset/ELM_5.png" alt="Structure of a pattern recognition repository for the use of ELM as a classifier.">
   <figcaption>Figure 5: Structure of a pattern recognition repository for the use of ELM as a classifier.</figcaption>
 </figure>
 
@@ -149,7 +149,7 @@ python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/mel
 -kfold 10 -ty 1 -virusNorm -nh 500 -af dilation -v
 
 <figure>
-  <img src="https://github.com/DejavuForensics/mELM/tree/main/dataset/ELM_6.png" alt="Structure of a repository for pattern recognition of _malware_ with a view to using ELM as a classifier.">
+  <img src="https://raw.githubusercontent.com/DejavuForensics/mELM/main/dataset/ELM_6.png" alt="Structure of a repository for pattern recognition of _malware_ with a view to using ELM as a classifier.">
   <figcaption>Figure 6: Structure of a repository for pattern recognition of _malware_ with a view to using ELM as a classifier.</figcaption>
 </figure>
 
