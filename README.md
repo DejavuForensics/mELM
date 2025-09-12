@@ -173,7 +173,7 @@ python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/mel
 
 ## Antivirus for malicious Google Chrome extensions
 
-python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antivirus_Dataset_GoogleChromeExtension_mELM_format.csv](https://github.com/DejavuForensics/IoT_ARM/blob/main/Antivirus_Dataset_GoogleChromeExtension_mELM_format.csv) -kfold 10 -ty 1 -virusNorm -nh 500 -af all -v
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antiviruses/Antivirus_Dataset_GoogleChromeExtension_mELM_format.csv](https://github.com/DejavuForensics/mELM/blob/main/Antiviruses/Antivirus_Dataset_GoogleChromeExtension_mELM_format.csv) -kfold 10 -ty 1 -virusNorm -nh 50,100,500 -af all -v
 
 
 ```
@@ -186,7 +186,7 @@ https://doi.org/10.1016/j.cose.2025.104465
 
 ## Antivirus for IoT _malware_ from ARM architectures
 
-python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antivirus_Dataset_IoT_SPARC_melmParameters_format.csv](https://github.com/DejavuForensics/IoT_ARM/blob/main/Antivirus_Dataset_IoT_ARM_melmParameters_format.csv) -kfold 10 -ty 1 -virusNorm -nh 500 -af all -v
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antiviruses/Antivirus_Dataset_IoT_ARM_mELM_format.csv](https://github.com/DejavuForensics/mELM/blob/main/Antiviruses/Antivirus_Dataset_IoT_ARM_mELM_format.csv) -kfold 10 -ty 1 -virusNorm -nh 50,100,500 -af all -v
 
 ```
 Tavares-Silva, S.H.M., Lopes-Lima, S.M., Paranhos-Pinheiro, R. et al.
@@ -197,8 +197,8 @@ https://doi.org/10.1007/s11227-024-06506-x
 
 ## Antivirus for IoT _malware_ from SPARC architectures
 
-python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antivirus_Dataset_IoT_SPARC_melmParameters_format.csv](https://github.com/DejavuForensics/IoT_SPARC/blob/main/Antivirus_Dataset_IoT_SPARC_melmParameters_format.csv) 
--kfold 10 -virusNorm -ty 1 -nh 500 -af all -v
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antiviruses/Antivirus_Dataset_IoT_SPARC_mELM_format.csv](https://github.com/DejavuForensics/mELM/blob/main/Antiviruses/Antivirus_Dataset_IoT_SPARC_mELM_format.csv) 
+-kfold 10 -virusNorm -ty 1 -nh 50,100,500 -af all -v
 
 ```
 Pinheiro Henriques de Araújo, I., Mariano Santiago de Abreu, L., Henrique Mendes Tavares Silva, S. et al.
@@ -209,8 +209,8 @@ https://doi.org/10.1007/s11416-024-00526-0
 
 ## Antivirus for Citadel _malware_
 
-python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antivirus_Dataset_PE32_Citadel_melmParameters_format.csv](https://github.com/DejavuForensics/Citadel/blob/main/Antivirus_Dataset_PE32_Citadel_melmParameters_format.csv) 
--kfold 10 -virusNorm -ty 1 -nh 500 -af all -v
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antiviruses/Antivirus_Dataset_PE32_Citadel_mELM_format.csv](https://github.com/DejavuForensics/mELM/blob/main/Antiviruses/Antivirus_Dataset_PE32_Citadel_mELM_format.csv) 
+-kfold 10 -virusNorm -ty 1 -nh 50,100,500 -af all -v
 
 ```
 Carlos Henrique Macedo dos Santos, Sidney Marlon Lopes de Lima,
@@ -222,8 +222,8 @@ https://doi.org/10.1016/j.jocs.2024.102389.
 ## Antivirus for Java apps
 The database is compressed due to the individual file size delimited by github. Download the compressed file (.zip) to your computer and decompress it before running the extreme neural networks.
 
-python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antivirus_Dataset_Jar_melmParameters_format.csv](https://github.com/DejavuForensics/REJAFADA/blob/master/Antivirus_Dataset_Jar_melmParameters_format.zip) 
--kfold 10 -virusNorm -ty 1 -nh 500 -af all -v
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antiviruses/Antivirus_Dataset_Jar_mELM_format.csv](https://github.com/DejavuForensics/mELM/blob/main/Antiviruses/Antivirus_Dataset_Jar_mELM_format.zip) 
+-kfold 10 -virusNorm -ty 1 -nh 50,100,500 -af all -v
 
 ```
 Pinheiro, R.P., Lima, S.M.L., Souza, D.M. et al. 
@@ -234,8 +234,8 @@ https://doi.org/10.1038/s41598-022-05921-5
 
 ## Antivirus for PHP apps
 
-python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antivirus_Dataset_PHP_batch_1_melmParameters_format](https://github.com/DejavuForensics/PAEMAL/blob/master/Antivirus_Dataset_PHP_batch_1_melmParameters_format.csv) 
--kfold 10 -virusNorm -ty 1 -nh 500 -af all -v
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antiviruses/Antivirus_Dataset_PHP_batch_1_mELM_format.csv](https://github.com/DejavuForensics/mELM/blob/main/Antiviruses/Antivirus_Dataset_PHP_batch_1_mELM_format.csv) 
+-kfold 10 -virusNorm -ty 1 -nh 50,100,500 -af all -v
 
 ```
 Lima, S.M.L., Silva, S.H.M.T., Pinheiro, R.P. et al.
@@ -247,9 +247,9 @@ https://doi.org/10.1007/s00500-022-07447-4
 ## Antivirus for JavaScript apps
 The database is compressed due to the individual file size delimited by github. Download the compressed file (.zip) to your computer and decompress it before running the extreme neural networks.
 
-python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antivirus_Dataset_JavaScript_melmParameters_format.csv](
-https://github.com/DejavuForensics/MARADJS/blob/master/Antivirus_Dataset_JavaScript_melmParameters_format.zip) 
--kfold 10 -virusNorm -ty 1 -nh 500 -af all -v
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antiviruses/Antivirus_Dataset_JavaScript_mELM_format.csv](
+https://github.com/DejavuForensics/mELM/blob/main/Antiviruses/Antivirus_Dataset_JavaScript_mELM_format.zip) 
+-kfold 10 -virusNorm -ty 1 -nh 50,100,500 -af all -v
 
 ```
 de Lima, S.M.L., Souza, D.M., Pinheiro, R.P. et al. 
