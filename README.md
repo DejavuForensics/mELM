@@ -47,24 +47,24 @@ Fig. 3 (a), Fig. 3 (b), Fig. 3 (c) and Fig. 3 (d) show the performance of the me
 The kernels melmParameterss are successful because they can model any decision boundary. They do not follow conventional geometric surfaces like ellipses and hyperbolas. The melmParameterss kernels map the decision boundary in _n_-dimensional. The coordinates are based on training samples. _n_ represents the number of extracted features. melmParameterss can detect and model different classes by using Mathematical Morphology. It detects the shapes of bodies in images.
 
 <figure>
-  <img src="https://raw.githubusercontent.com/DejavuForensics/mELM/main/dataset/ELM_1.png" alt="Successful performances of the _kernels_ compatible with the datasets.">
+  <img src="https://raw.githubusercontent.com/DejavuForensics/mELM/main/EN-US/ELM_1.png" alt="Successful performances of the _kernels_ compatible with the datasets.">
   <figcaption>Figure 1: Successful performances of the _kernels_ compatible with the datasets.</figcaption>
 </figure>
 
 
 
 <figure>
-  <img src="https://raw.githubusercontent.com/DejavuForensics/mELM/main/dataset/ELM_2.png" alt="Unsuccessful performance of linear kernel on non-linearly separable datasets.">
+  <img src="https://raw.githubusercontent.com/DejavuForensics/mELM/main/EN-US/ELM_2.png" alt="Unsuccessful performance of linear kernel on non-linearly separable datasets.">
   <figcaption>Figure 2: Unsuccessful performance of linear kernel on non-linearly separable datasets.</figcaption>
 </figure>
 
 <figure>
-  <img src="https://raw.githubusercontent.com/DejavuForensics/mELM/main/dataset/ELM_3.png" alt="Successful performances of the melmParameters Erosion kernel in multiple datasets.">
+  <img src="https://raw.githubusercontent.com/DejavuForensics/mELM/main/EN-US/ELM_3.png" alt="Successful performances of the melmParameters Erosion kernel in multiple datasets.">
   <figcaption>Figure 3: Successful performances of the melmParameters Erosion kernel in multiple datasets.</figcaption>
 </figure>
 
 <figure>
-  <img src="https://raw.githubusercontent.com/DejavuForensics/mELM/main/dataset/ELM_4.png" alt="Successful performances of the melmParameters Dilation kernel in multiple datasets.">
+  <img src="https://raw.githubusercontent.com/DejavuForensics/mELM/main/EN-US/ELM_4.png" alt="Successful performances of the melmParameters Dilation kernel in multiple datasets.">
   <figcaption>Figure 4: Successful performances of the melmParameters Dilation kernel in multiple datasets.</figcaption>
 </figure>
 
@@ -130,10 +130,10 @@ Cross-validation is a statistical technique. Researchers use it to assess the pe
 - At the end of learning (training), the ELM neural network will be capable of generalization. The ELM will classify the unseen sample as either class (1.0) or counter-class (0.0). An unseen sample refers to a sample not presented during training.
 -    In the terminal, use the extreme neural network in didactic repository. Here's an example:
    
-python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tr [diabetes_train](https://github.com/DejavuForensics/melmParameters/blob/main/dataset/classification/diabetes_train) -ts [diabetes_test](https://github.com/DejavuForensics/melmParameters/blob/main/dataset/classification/diabetes_test)  -ty 1 -virusNorm -nh 100 -af dilation -v
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/EN-US/classification/melmParameters.py) -tr [diabetes_train](https://github.com/DejavuForensics/mELM/blob/main/EN-US/classification/diabetes_train) -ts [diabetes_test](https://github.com/DejavuForensics/mELM/blob/main/EN-US/classification/diabetes_test)  -ty 1 -virusNorm -nh 100 -af dilation -v
 
 <figure>
-  <img src="https://raw.githubusercontent.com/DejavuForensics/mELM/main/dataset/ELM_5.png" alt="Structure of a pattern recognition repository for the use of ELM as a classifier.">
+  <img src="https://raw.githubusercontent.com/DejavuForensics/mELM/main/EN-US/ELM_5.png" alt="Structure of a pattern recognition repository for the use of ELM as a classifier.">
   <figcaption>Figure 5: Structure of a pattern recognition repository for the use of ELM as a classifier.</figcaption>
 </figure>
 
@@ -148,11 +148,11 @@ python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/mel
 -    You can use databases from [Kaggle](https://www.kaggle.com/) or [UCI](https://archive.ics.uci.edu/datasets). Search for repositories on their websites that specialize in predicting and analyzing time series.
 -    In the terminal, use the extreme neural network in didactic repository. Here's an example:
 
-python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tr [sinc_train](https://github.com/DejavuForensics/melmParameters/blob/main/dataset/regression/sinc_train) -ts [sinc_test](https://github.com/DejavuForensics/melmParameters/blob/main/dataset/regression/sinc_test) 
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/EN-US/classification/melmParameters.py) -tr [sinc_train](https://github.com/DejavuForensics/mELM/blob/main/EN-US/regression/sinc_train) -ts [sinc_test](https://github.com/DejavuForensics/mELM/blob/main/EN-US/regression/sinc_test) 
 -ty 0 -nh 100 -af dilation -v
 
 <figure>
-  <img src="https://github.com/DejavuForensics/melmParameters/blob/main/dataset/ELM_7.png" alt="Structure of a repository for prediction using ELM as a regressor.">
+  <img src="https://github.com/DejavuForensics/mELM/blob/main/EN-US/ELM_7.png" alt="Structure of a repository for prediction using ELM as a regressor.">
   <figcaption>Figure 7: Structure of a repository for prediction using ELM as a regressor.</figcaption>
 </figure>
 
@@ -165,7 +165,7 @@ python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/mel
 - In the terminal, use the extreme neural network in professional repository. Here's an example:
 
 <figure>
-  <img src="https://raw.githubusercontent.com/DejavuForensics/mELM/main/dataset/ELM_6.png" alt="Structure of a repository for pattern recognition of _malware_ with a view to using ELM as a classifier.">
+  <img src="https://raw.githubusercontent.com/DejavuForensics/mELM/main/EN-US/ELM_6.png" alt="Structure of a repository for pattern recognition of _malware_ with a view to using ELM as a classifier.">
   <figcaption>Figure 6: Structure of a repository for pattern recognition of _malware_ with a view to using ELM as a classifier.</figcaption>
 </figure>
 
@@ -173,7 +173,7 @@ python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/mel
 
 ## Antivirus for malicious Google Chrome extensions
 
-python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antiviruses/Antivirus_Dataset_GoogleChromeExtension_mELM_format.csv](https://github.com/DejavuForensics/mELM/blob/main/Antiviruses/Antivirus_Dataset_GoogleChromeExtension_mELM_format.csv) -kfold 10 -ty 1 -virusNorm -nh 50,100,500 -af all -v
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/EN-US/classification/melmParameters.py) -tall [Antiviruses/Antivirus_Dataset_GoogleChromeExtension_mELM_format.csv](https://github.com/DejavuForensics/mELM/blob/main/Antiviruses/Antivirus_Dataset_GoogleChromeExtension_mELM_format.csv) -kfold 10 -ty 1 -virusNorm -nh 50,100,500 -af all -v
 
 
 ```
@@ -186,7 +186,7 @@ https://doi.org/10.1016/j.cose.2025.104465
 
 ## Antivirus for IoT _malware_ from ARM architectures
 
-python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antiviruses/Antivirus_Dataset_IoT_ARM_mELM_format.csv](https://github.com/DejavuForensics/mELM/blob/main/Antiviruses/Antivirus_Dataset_IoT_ARM_mELM_format.csv) -kfold 10 -ty 1 -virusNorm -nh 50,100,500 -af all -v
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/EN-US/classification/melmParameters.py) -tall [Antiviruses/Antivirus_Dataset_IoT_ARM_mELM_format.csv](https://github.com/DejavuForensics/mELM/blob/main/Antiviruses/Antivirus_Dataset_IoT_ARM_mELM_format.csv) -kfold 10 -ty 1 -virusNorm -nh 50,100,500 -af all -v
 
 ```
 Tavares-Silva, S.H.M., Lopes-Lima, S.M., Paranhos-Pinheiro, R. et al.
@@ -197,7 +197,7 @@ https://doi.org/10.1007/s11227-024-06506-x
 
 ## Antivirus for IoT _malware_ from SPARC architectures
 
-python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antiviruses/Antivirus_Dataset_IoT_SPARC_mELM_format.csv](https://github.com/DejavuForensics/mELM/blob/main/Antiviruses/Antivirus_Dataset_IoT_SPARC_mELM_format.csv) 
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/EN-US/classification/melmParameters.py) -tall [Antiviruses/Antivirus_Dataset_IoT_SPARC_mELM_format.csv](https://github.com/DejavuForensics/mELM/blob/main/Antiviruses/Antivirus_Dataset_IoT_SPARC_mELM_format.csv) 
 -kfold 10 -virusNorm -ty 1 -nh 50,100,500 -af all -v
 
 ```
@@ -209,7 +209,7 @@ https://doi.org/10.1007/s11416-024-00526-0
 
 ## Antivirus for Citadel _malware_
 
-python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antiviruses/Antivirus_Dataset_PE32_Citadel_mELM_format.csv](https://github.com/DejavuForensics/mELM/blob/main/Antiviruses/Antivirus_Dataset_PE32_Citadel_mELM_format.csv) 
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/EN-US/classification/melmParameters.py) -tall [Antiviruses/Antivirus_Dataset_PE32_Citadel_mELM_format.csv](https://github.com/DejavuForensics/mELM/blob/main/Antiviruses/Antivirus_Dataset_PE32_Citadel_mELM_format.csv) 
 -kfold 10 -virusNorm -ty 1 -nh 50,100,500 -af all -v
 
 ```
@@ -222,7 +222,7 @@ https://doi.org/10.1016/j.jocs.2024.102389.
 ## Antivirus for Java apps
 The database is compressed due to the individual file size delimited by github. Download the compressed file (.zip) to your computer and decompress it before running the extreme neural networks.
 
-python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antiviruses/Antivirus_Dataset_Jar_mELM_format.csv](https://github.com/DejavuForensics/mELM/blob/main/Antiviruses/Antivirus_Dataset_Jar_mELM_format.zip) 
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/EN-US/classification/melmParameters.py) -tall [Antiviruses/Antivirus_Dataset_Jar_mELM_format.csv](https://github.com/DejavuForensics/mELM/blob/main/Antiviruses/Antivirus_Dataset_Jar_mELM_format.zip) 
 -kfold 10 -virusNorm -ty 1 -nh 50,100,500 -af all -v
 
 ```
@@ -234,7 +234,7 @@ https://doi.org/10.1038/s41598-022-05921-5
 
 ## Antivirus for PHP apps
 
-python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antiviruses/Antivirus_Dataset_PHP_batch_1_mELM_format.csv](https://github.com/DejavuForensics/mELM/blob/main/Antiviruses/Antivirus_Dataset_PHP_batch_1_mELM_format.csv) 
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/EN-US/classification/melmParameters.py) -tall [Antiviruses/Antivirus_Dataset_PHP_batch_1_mELM_format.csv](https://github.com/DejavuForensics/mELM/blob/main/Antiviruses/Antivirus_Dataset_PHP_batch_1_mELM_format.csv) 
 -kfold 10 -virusNorm -ty 1 -nh 50,100,500 -af all -v
 
 ```
@@ -247,7 +247,7 @@ https://doi.org/10.1007/s00500-022-07447-4
 ## Antivirus for JavaScript apps
 The database is compressed due to the individual file size delimited by github. Download the compressed file (.zip) to your computer and decompress it before running the extreme neural networks.
 
-python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/melmParameters.py) -tall [Antiviruses/Antivirus_Dataset_JavaScript_mELM_format.csv](
+python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/EN-US/classification/melmParameters.py) -tall [Antiviruses/Antivirus_Dataset_JavaScript_mELM_format.csv](
 https://github.com/DejavuForensics/mELM/blob/main/Antiviruses/Antivirus_Dataset_JavaScript_mELM_format.zip) 
 -kfold 10 -virusNorm -ty 1 -nh 50,100,500 -af all -v
 
