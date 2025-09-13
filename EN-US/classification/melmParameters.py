@@ -67,6 +67,22 @@ def loadingDataset(dataset):
     P = np.transpose(dataset[:,1:np.size(dataset,1)])
     return T, P
 
+def virusNormFunction(matrix, verbose):
+    """
+    Normalização virusNorm conforme implementada no arquivo original.
+    Normaliza a matriz para o intervalo [0.1, 0.9].
+    """
+    if verbose:
+        print('virusNorm normalization')
+
+    vector = matrix.flatten()
+    maxi = np.max(vector)
+    mini = np.min(vector)
+    ra = 0.9
+    rb = 0.1
+    R = (((ra - rb) * (matrix - mini)) / (maxi - mini)) + rb
+    return R
+
 def switchActivationFunction(ActivationFunction, InputWeight, BiasofHiddenNeurons, P):
     if ActivationFunction in ('sig', 'sigmoid'): return sig_kernel(InputWeight, BiasofHiddenNeurons, P)
     elif ActivationFunction in ('sin', 'sine'): return sin_kernel(InputWeight, BiasofHiddenNeurons, P)
@@ -74,16 +90,20 @@ def switchActivationFunction(ActivationFunction, InputWeight, BiasofHiddenNeuron
     elif ActivationFunction == 'tribas': return tribas_kernel(InputWeight, BiasofHiddenNeurons, P)
     elif ActivationFunction == 'radbas': return radbas_kernel(InputWeight, BiasofHiddenNeurons, P)
     else: return linear_kernel(InputWeight, BiasofHiddenNeurons, P)
+
 def sig_kernel(w1, b1, samples):
     tempH = np.dot(w1, samples) + b1; tempH = np.clip(tempH, -40, 40)
     return 1.0 / (1.0 + np.exp(-tempH))
+
 def sin_kernel(w1, b1, samples): return np.sin(np.dot(w1, samples) + b1)
 def hardlim_kernel(w1, b1, samples): return (np.dot(w1, samples) + b1 >= 0).astype(float)
 def linear_kernel(w1, b1, samples): return np.dot(w1, samples) + b1
+
 def tribas_kernel(w1, b1, samples):
     tempH = np.dot(w1, samples) + b1; H = 1 - np.abs(tempH)
     H[(tempH < -1) | (tempH > 1)] = 0
     return H
+
 def radbas_kernel(w1, b1, samples):
     tempH = np.dot(w1, samples) + b1
     return np.exp(-np.power(tempH, 2))
@@ -92,7 +112,7 @@ def radbas_kernel(w1, b1, samples):
 # ELM MAIN LOGIC
 #========================================================================
 
-def mElmLearning(train_data, test_data, Elm_Type, NumberofHiddenNeurons, ActivationFunction, execution, kfold, verbose):
+def mElmLearning(train_data, test_data, Elm_Type, NumberofHiddenNeurons, ActivationFunction, execution, kfold, verbose, virusNorm=False):
     [T, P] = loadingDataset(train_data)
     [TVT, TVP] = loadingDataset(test_data)
     NumberofTrainingData=np.size(P,1); NumberofTestingData=np.size(TVP,1); NumberofInputNeurons=np.size(P,0)
@@ -118,7 +138,23 @@ def mElmLearning(train_data, test_data, Elm_Type, NumberofHiddenNeurons, Activat
         TVT=temp_TV_T*2-1
 
     start_time_train = process_time()
-    InputWeight = np.random.rand(NumberofHiddenNeurons, NumberofInputNeurons)*2-1
+
+    # Geração de pesos - com suporte para diferentes tipos de ativação
+    if Elm_Type == 0:  # Regression
+        if ActivationFunction in ('erosion','ero','dilation','dil','fuzzy-erosion','fuzzy_erosion',
+                                  'fuzzy-dilation','fuzzy_dilation','bitwise-erosion','bitwise_erosion',
+                                  'bitwise-dilation','bitwise_dilation'):
+            InputWeight = np.random.uniform(np.amin(np.amin(P)), np.amax(np.amax(P)),
+                                            (NumberofHiddenNeurons, NumberofInputNeurons))
+        else:
+            InputWeight = np.random.rand(NumberofHiddenNeurons, NumberofInputNeurons)*2-1
+    else:
+        InputWeight = np.random.rand(NumberofHiddenNeurons, NumberofInputNeurons)*2-1
+
+    # APLICAR virusNorm se solicitado
+    if virusNorm:
+        InputWeight = virusNormFunction(InputWeight, verbose)
+
     BiasofHiddenNeurons = np.random.rand(NumberofHiddenNeurons, 1)
     H = switchActivationFunction(ActivationFunction, InputWeight, BiasofHiddenNeurons, P)
     OutputWeight = np.dot(np.linalg.pinv(np.transpose(H)), np.transpose(T))
@@ -168,7 +204,7 @@ def mElmLearning(train_data, test_data, Elm_Type, NumberofHiddenNeurons, Activat
     return TrainingAccuracy, TestingAccuracy, TrainingTime, TestingTime, cm_fold_train, cm_fold_test
 
 class melm():
-    def main(self, AllData_File, Elm_Type, NumberofHiddenNeurons, ActivationFunction, nSeed, kfold, sep, verbose):
+    def main(self, AllData_File, Elm_Type, NumberofHiddenNeurons, ActivationFunction, nSeed, kfold, sep, verbose, virusNorm=False):
         ALL_FUNCTIONS = ['sig', 'sin', 'radbas', 'linear', 'hardlim', 'tribas']
         if ActivationFunction == 'all':
             acts = ALL_FUNCTIONS
@@ -196,7 +232,8 @@ class melm():
                     test_data  = all_data[samples_index[te_idx], :]
 
                     # Passing 'i' and 'kfold' to the mElmLearning function for verbose printing
-                    TA, TeA, TT, Tt, cm_train, cm_test = mElmLearning(train_data, test_data, Elm_Type, nh, af, i, kfold, verbose)
+                    # ADICIONADO O PARÂMETRO virusNorm AQUI
+                    TA, TeA, TT, Tt, cm_train, cm_test = mElmLearning(train_data, test_data, Elm_Type, nh, af, i, kfold, verbose, virusNorm)
 
                     acc_train.append(TA); acc_test.append(TeA)
                     t_train.append(TT); t_test.append(Tt)
@@ -341,7 +378,7 @@ def generate_html_report_elm(global_results, act_results, output_file='elm_repor
                     <div class="cm-container"><img class="cm-image" src="elm_report_images/cm_global_best.png" alt="Confusion Matrix - Best Global"></div>
                 </div>
                 <div class="stat-card worst">
-                    <div class="card-header"><div class="card-icon worst">👎</div><div class="card-title">Worst Overall Performance</div></div>
+                    <div class="card-header"><div class="card-icon worst">💎</div><div class="card-title">Worst Overall Performance</div></div>
                     <div class="metric-row"><span class="metric-label">Configuration (n_hidden)</span><span class="metric-value worst">{{ global_results.min.n_hidden }}</span></div>
                     <div class="metric-row"><span class="metric-label">Worst Activation</span><span class="metric-value worst">{{ global_results.min.act }}</span></div>
                     <div class="metric-row"><span class="metric-label">Training Accuracy</span><span class="metric-value worst">{{ "%.2f"|format(global_results.min.accuracy_train) }}% &plusmn; {{ "%.2f"|format(global_results.min.std_train) }}%</span></div>
@@ -369,7 +406,7 @@ def generate_html_report_elm(global_results, act_results, output_file='elm_repor
                             <div class="cm-container"><img class="cm-image" src="elm_report_images/cm_act_{{ act_name|replace(' ', '_') }}_best_test.png" alt="CM Best Test"></div>
                         </div>{% endif %}
                         {% if data.min_test %}<div class="result-card worst">
-                            <div class="result-header"><div class="result-icon worst">👎</div><div class="result-title">Worst Scenario</div></div>
+                            <div class="result-header"><div class="result-icon worst">💎</div><div class="result-title">Worst Scenario</div></div>
                             <ul class="metrics-list">
                                 <li><span class="metric-name">Configuration (n_hidden):</span><span class="metric-val">{{ data.min_test.n_hidden }}</span></li>
                                 <li><span class="metric-name">Test Accuracy:</span><span class="metric-val">{{ "%.2f"|format(data.min_test.accuracy_test) }}% &plusmn; {{ "%.2f"|format(data.min_test.std_test) }}%</span></li>
@@ -410,10 +447,12 @@ if __name__ == "__main__":
     parser.add_argument('-sd', '--seed',dest='nSeed',action='store')
     parser.add_argument('-kfold', dest='kfold', action='store', default=5, help="Number of folds for cross-validation (default: 5)")
     parser.add_argument('-sep', dest='sep', action='store', default=';', help="CSV separator (default: ';')")
+    parser.add_argument('-virusNorm', dest='virusNorm', action='store_true', default=False,
+        help="Normalization according to the range of VirusShare sample attributes.")
     parser.add_argument('-v', dest='verbose', action='store_true', default=True)
     args = parser.parse_args()
 
     ff = melm()
-    # --- CORRECTED MAIN FUNCTION CALL ---
+    # MODIFICADA A CHAMADA PARA INCLUIR O PARÂMETRO virusNorm
     ff.main(args.AllData_File, args.Elm_Type, args.nHiddenNeurons, args.ActivationFunction,
-            args.nSeed, args.kfold, args.sep, args.verbose)
+            args.nSeed, args.kfold, args.sep, args.verbose, args.virusNorm)
