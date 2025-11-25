@@ -15,6 +15,12 @@ In the terminal, install requirements.
 pip install -r requirements.txt
 ```
 
+Example of usage
+```
+python melmParameters.py -tall ../../Antiviruses/Antivirus_Dataset_IoT_ARM_mELM_format.csv -ty 1 -nh 100,200 -af erosion,sigmoid -kfold 10 -virusNorm -v
+```
+
+
 ## Theoretical Background
 
 Neural network is a computational intelligence model employed to solve pattern recognition problems. Neural networks can generalize and recognize new data that wasn't taught during training. In backpropagation strategy, adjusting many parameters is necessary to improve neural network performance. 
