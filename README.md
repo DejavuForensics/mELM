@@ -19,7 +19,11 @@ Example of usage
 ```
 python melmParameters.py -tall ../../Antiviruses/Antivirus_Dataset_IoT_ARM_mELM_format.csv -ty 1 -nh 100,200 -af erosion,sigmoid -kfold 10 -virusNorm -v
 ```
+or 
 
+```
+python EN-US/classification/melmParameters.py -tall Antiviruses/Antivirus_Dataset_IoT_ARM_mELM_format.csv -ty 1 -nh 100,200 -af erosion,sigmoid -kfold 10 -virusNorm -v
+```
 
 ## Theoretical Background
 
