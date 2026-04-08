@@ -181,6 +181,14 @@ python [melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/EN-
 
 # Usage in distinct antiviruses
 
+## Antivirus for Advanced Persistent Threats (APT)
+python [EN-US/classification/melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/EN-US/classification/melmParameters.py) -tall [Antiviruses/Antivirus_Dataset_PE32_APT.csv](https://github.com/DejavuForensics/mELM/blob/main/Antiviruses/Antivirus_Dataset_PE32_APT.csv) -kfold 10 -ty 1 -virusNorm -nh 50,100,500 -af all -v
+
+
+```
+Gabriela Leite Pereira, Isaac Neves Farias, Sidney Marlon Lopes de Lima,
+```
+
 ## Antivirus for malicious Google Chrome extensions
 
 python [EN-US/classification/melmParameters.py](https://github.com/DejavuForensics/mELM/blob/main/EN-US/classification/melmParameters.py) -tall [Antiviruses/Antivirus_Dataset_GoogleChromeExtension_mELM_format.csv](https://github.com/DejavuForensics/mELM/blob/main/Antiviruses/Antivirus_Dataset_GoogleChromeExtension_mELM_format.csv) -kfold 10 -ty 1 -virusNorm -nh 50,100,500 -af all -v
