@@ -1,4 +1,4 @@
-# melmParameters
+# melmParameters.
 Morphological Extreme Learning Machine
   
 ### Follow the instruction:
