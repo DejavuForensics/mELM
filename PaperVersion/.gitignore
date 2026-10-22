@@ -1,0 +1,30 @@
+# Ambientes Python e caches
+.venv/
+venv/
+**/.venv/
+**/venv/
+.env/
+.env
+.env.*
+!.env.example
+**/.env/
+**/.env
+**/.env.*
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Artefatos locais de execução
+results/
+**/results/
+melm-results/
+**/melm-results/
+elm_report_*.html
+elm_report_images_*/
+melm_feature_audit*.csv
+
+# Arquivos temporários
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp

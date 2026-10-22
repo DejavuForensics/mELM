@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+{% macro tooltip(text) -%}
+<span class="info-tooltip" tabindex="0" aria-label="{{ text }}">
+  <span aria-hidden="true">ⓘ</span>
+  <span class="tooltip-text" aria-hidden="true">{{ text }}</span>
+</span>
+{%- endmacro %}
+<html lang="{{ language }}">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ labels.title }} - {{ labels.report }}</title>
+  <link rel="stylesheet" href="{{ css_path }}">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<div class="dashboard-container">
+  <header class="header">
+    <img src="{{ logo_upe_path }}" class="header-logo header-logo-left" alt="UPE">
+    <h1>{{ labels.title }}</h1>
+    <img src="{{ logo_ufpe_path }}" class="header-logo header-logo-right" alt="UFPE">
+    <p class="subtitle">{{ labels.subtitle }}</p>
+  </header>
+
+  <nav class="report-tabs" role="tablist" aria-label="{{ labels.report_sections }}">
+    <button type="button" class="report-tab is-active" role="tab" id="tab-overview" aria-controls="panel-overview" aria-selected="true" tabindex="0">{{ labels.overview }}</button>
+    {% if boxplots %}<button type="button" class="report-tab" role="tab" id="tab-distributions" aria-controls="panel-distributions" aria-selected="false" tabindex="-1">{{ labels.distributions }}</button>{% endif %}
+    <button type="button" class="report-tab" role="tab" id="tab-activations" aria-controls="panel-activations" aria-selected="false" tabindex="-1">{{ labels.summary }}</button>
+    {% if diagnostics %}<button type="button" class="report-tab" role="tab" id="tab-diagnostics" aria-controls="panel-diagnostics" aria-selected="false" tabindex="-1">{{ labels.diagnostics }}</button>{% endif %}
+    <button type="button" class="report-tab" role="tab" id="tab-audit" aria-controls="panel-audit" aria-selected="false" tabindex="-1">{{ labels.audit }}</button>
+  </nav>
+
+  <div class="report-tab-panel is-active" id="panel-overview" role="tabpanel" aria-labelledby="tab-overview">
+  <section class="report-config">
+    <h2 class="section-title"><span class="title-icon">🧪</span><span class="title-text">{{ labels.config }}</span></h2>
+    <p class="section-note">{{ labels.note }}</p>
+    <div class="config-grid">
+      <div class="config-item"><div class="config-label">{{ labels.dataset }}{{ tooltip(tips.dataset) }}</div><div class="config-value">{{ config.dataset }}</div></div>
+      <div class="config-item"><div class="config-label">{{ labels.validation }}{{ tooltip(tips.validation) }}</div><div class="config-value">{{ config.validation }}{% if config.kfold > 1 %} (k={{ config.kfold }}){% endif %}</div></div>
+      <div class="config-item"><div class="config-label">{{ labels.seed }}{{ tooltip(tips.seed) }}</div><div class="config-value">{{ config.seed }}</div></div>
+      <div class="config-item"><div class="config-label">{{ labels.task }}{{ tooltip(tips.task) }}</div><div class="config-value">{{ config.task }}</div></div>
+      <div class="config-item"><div class="config-label">{{ labels.pruning_applied }}{{ tooltip(tips.pruning_applied) }}</div><div class="config-value">{{ config.pruning_applied }}</div></div>
+      <div class="config-item"><div class="config-label">{{ labels.pruning_method }}{{ tooltip(tips.pruning_method) }}</div><div class="config-value">{{ config.feature_selection }}</div></div>
+      <div class="config-item config-item-wide"><div class="config-label">{{ labels.executed }}{{ tooltip(tips.executed) }}</div><div class="config-value">{{ config.executed_activations }}</div></div>
+    </div>
+    <details class="config-details">
+      <summary>{{ "Mais detalhes da configuração" if language == "pt-br" else "More configuration details" }}</summary>
+      <div class="config-grid" style="margin-top:14px">
+        <div class="config-item"><div class="config-label">{{ labels.generated }}{{ tooltip(tips.generated) }}</div><div class="config-value">{{ config.generated }}</div></div>
+        <div class="config-item"><div class="config-label">{{ labels.requested }}{{ tooltip(tips.requested) }}</div><div class="config-value">{{ config.requested_activations }}</div></div>
+        <div class="config-item"><div class="config-label">{{ labels.skipped }}{{ tooltip(tips.skipped) }}</div><div class="config-value">{{ config.skipped_activations }}</div></div>
+        <div class="config-item"><div class="config-label">{{ labels.neurons }}{{ tooltip(tips.neurons) }}</div><div class="config-value">{{ config.neurons }}</div></div>
+        <div class="config-item"><div class="config-label">{{ labels.threshold }}{{ tooltip(tips.threshold) }}</div><div class="config-value">{{ config.threshold }}</div></div>
+        <div class="config-item"><div class="config-label">{{ labels.variance_threshold }}{{ tooltip(tips.variance_threshold) }}</div><div class="config-value">{{ config.variance_threshold }}</div></div>
+        <div class="config-item"><div class="config-label">{{ labels.leakage }}{{ tooltip(tips.leakage) }}</div><div class="config-value">{{ config.leakage_threshold }}</div></div>
+        <div class="config-item"><div class="config-label">{{ labels.max_time }}{{ tooltip(tips.max_time) }}</div><div class="config-value">{{ config.max_time }} s</div></div>
+        <div class="config-item"><div class="config-label">{{ labels.force }}{{ tooltip(tips.force) }}</div><div class="config-value">{{ config.force_all }}</div></div>
+        <div class="config-item"><div class="config-label">{{ labels.virus_norm }}{{ tooltip(tips.virus_norm) }}</div><div class="config-value">{{ config.virus_norm }}</div></div>
+        <div class="config-item"><div class="config-label">{{ labels.controls }}{{ tooltip(tips.controls) }}</div><div class="config-value">{{ labels.seed }} {{ config.seed }}</div></div>
+      </div>
+    </details>
+  </section>
+
+  <section class="stats-grid" style="margin-top:24px">
+    {% for key, result in [("best", global_results.max), ("worst", global_results.min)] %}
+    <article class="stat-card {{ 'best' if key == 'best' else 'worst' }}">
+      <div class="card-header"><div class="card-icon {{ key }}">{{ "🏆" if key == "best" else "!" }}</div><div class="card-title">{{ labels[key] }}</div></div>
+      <div class="metric-row"><span class="metric-label">{{ labels.activation }}</span><span class="metric-value {{ key }}">{{ result.act }}</span></div>
+      <div class="metric-row"><span class="metric-label">{{ labels.configuration }}</span><span class="metric-value">{{ result.n_hidden }}</span></div>
+      <div class="metric-row"><span class="metric-label">{{ labels.train_metric }}</span><span class="metric-value">{{ "%.2f"|format(result.accuracy_train) }}{{ metric_unit }} ± {{ "%.2f"|format(result.std_train) }}{{ metric_unit }}</span></div>
+      <div class="metric-row"><span class="metric-label">{{ labels.test_metric }}</span><span class="metric-value">{{ "%.2f"|format(result.accuracy_test) }}{{ metric_unit }} ± {{ "%.2f"|format(result.std_test) }}{{ metric_unit }}</span></div>
+      <div class="metric-row"><span class="metric-label">{{ labels.train_time }}</span><span class="metric-value">{{ "%.4f"|format(result.time_train) }} s ± {{ "%.4f"|format(result.std_time_train) }} s</span></div>
+      <div class="metric-row"><span class="metric-label">{{ labels.test_time }}</span><span class="metric-value">{{ "%.4f"|format(result.time_test) }} s ± {{ "%.4f"|format(result.std_time_test) }} s</span></div>
+      {% if is_classification %}
+        {% set cm = cm_global_best if key == 'best' else cm_global_worst %}
+        {% if cm %}<div class="cm-container"><img class="cm-image" src="{{ cm }}" alt="{{ labels.confusion }}"></div>{% endif %}
+      {% endif %}
+    </article>
+    {% endfor %}
+  </section>
+
+  {% if skipped_info %}
+  <section class="kernels-section" style="margin-top:24px">
+    <h2 class="section-title">{{ labels.skipped }}</h2>
+    <div class="table-wrap"><table><thead><tr><th>{{ labels.activation }}</th><th>{{ labels.estimate }}</th><th>{{ labels.limit }}</th></tr></thead><tbody>
+    {% for name, info in skipped_info.items() %}<tr><td>{{ name }}</td><td>{{ "%.2f"|format(info.estimated_seconds) }} s</td><td>{{ "%.2f"|format(info.limit_seconds) }} s</td></tr>{% endfor %}
+    </tbody></table></div>
+  </section>
+  {% endif %}
+  </div>
+
+  {% if boxplots %}
+  <div class="report-tab-panel" id="panel-distributions" role="tabpanel" aria-labelledby="tab-distributions">
+    <section class="kernels-section">
+      <h2 class="section-title">{{ labels.fold_box }}</h2><p class="section-note">{{ labels.box_note }}</p>
+      {% for key, plot in boxplots.items() %}
+      <article class="boxplot-card">
+        <div class="boxplot-card-heading">
+          <h3>{{ labels.train_box if key == 'train' else labels.test_box }}</h3>
+          <a href="{{ plot.href }}" download>{{ labels.download_png }}</a>
+        </div>
+        <div class="responsive-boxplot" role="group" aria-label="{{ labels.train_box if key == 'train' else labels.test_box }}">
+          <div class="boxplot-axis-title">{{ labels.box_axis }}</div>
+          <div class="boxplot-axis">{% for tick in plot.ticks %}<span>{{ tick }}</span>{% endfor %}</div>
+          {% for item in plot['items'] %}
+          <div class="boxplot-row">
+            <div class="boxplot-row-label">{{ item.name }} <span>(h={{ item.hidden }})</span></div>
+            <svg class="boxplot-row-graphic" viewBox="0 0 1000 40" preserveAspectRatio="none" role="img" aria-label="{{ item.name }} (h={{ item.hidden }})">
+              {% for x in [0, 250, 500, 750, 1000] %}<line class="boxplot-grid-line" x1="{{ x }}" x2="{{ x }}" y1="0" y2="40" />{% endfor %}
+              <line class="boxplot-whisker" x1="{{ item.low_x }}" x2="{{ item.high_x }}" y1="20" y2="20" />
+              <line class="boxplot-whisker" x1="{{ item.low_x }}" x2="{{ item.low_x }}" y1="13" y2="27" />
+              <line class="boxplot-whisker" x1="{{ item.high_x }}" x2="{{ item.high_x }}" y1="13" y2="27" />
+              <rect class="boxplot-box" x="{{ item.q1_x }}" y="9" width="{{ item.box_width }}" height="22" fill="{{ item.color }}" />
+              <line class="boxplot-median" x1="{{ item.median_x }}" x2="{{ item.median_x }}" y1="9" y2="31" />
+              {% for x in item.outliers_x %}<circle class="boxplot-outlier" cx="{{ x }}" cy="20" r="4" />{% endfor %}
+            </svg>
+          </div>
+          {% endfor %}
+        </div>
+        <p class="boxplot-caption">{{ labels.box_legend }}</p>
+      </article>
+      {% endfor %}
+    </section>
+  </div>
+  {% endif %}
+
+  <div class="report-tab-panel" id="panel-activations" role="tabpanel" aria-labelledby="tab-activations">
+  <section class="kernels-section" style="margin-top:24px">
+    <h2 class="section-title">{{ labels.summary }}</h2>
+    {% if act_results|length > 1 %}
+    <label class="activation-label" for="activation-summary-select">{{ labels.choose_activation }}</label>
+    <select class="activation-select" id="activation-summary-select" data-activation-picker="activation-summary-items">
+      {% for name in act_results %}<option value="{{ loop.index0 }}">{{ name }}</option>{% endfor %}
+    </select>
+    {% endif %}
+    <div id="activation-summary-items">
+    {% for name, data in act_results.items() %}
+    <div class="kernel-group" data-activation-item="{{ loop.index0 }}">
+      <h3 class="kernel-title">{{ name }}</h3>
+      <div class="kernel-results">
+        {% for key, result in [("best_scenario", data.max_test), ("worst_scenario", data.min_test)] %}
+        {% if result %}
+        <article class="result-card {{ 'best' if key == 'best_scenario' else 'worst' }}">
+          <div class="result-header"><div class="result-icon {{ 'best' if key == 'best_scenario' else 'worst' }}">{{ "✓" if key == "best_scenario" else "!" }}</div><div class="result-title">{{ labels[key] }}</div></div>
+          <ul class="metrics-list">
+            <li><span class="metric-name">{{ labels.configuration }}</span><span class="metric-val">{{ result.n_hidden }}</span></li>
+            <li><span class="metric-name">{{ labels.test_metric }}</span><span class="metric-val">{{ "%.2f"|format(result.accuracy_test) }}{{ metric_unit }} ± {{ "%.2f"|format(result.std_test) }}{{ metric_unit }}</span></li>
+            <li><span class="metric-name">{{ labels.train_metric }}</span><span class="metric-val">{{ "%.2f"|format(result.accuracy_train) }}{{ metric_unit }} ± {{ "%.2f"|format(result.std_train) }}{{ metric_unit }}</span></li>
+            <li><span class="metric-name">{{ labels.test_time }}</span><span class="metric-val">{{ "%.4f"|format(result.time_test) }} s ± {{ "%.4f"|format(result.std_time_test) }} s</span></li>
+            <li><span class="metric-name">{{ labels.train_time }}</span><span class="metric-val">{{ "%.4f"|format(result.time_train) }} s ± {{ "%.4f"|format(result.std_time_train) }} s</span></li>
+          </ul>
+          {% if is_classification and act_cm.get(name) %}
+            {% set cm = act_cm[name].best if key == 'best_scenario' else act_cm[name].worst %}
+            {% if cm %}<div class="cm-container"><img class="cm-image" src="{{ cm }}" alt="{{ labels.confusion }} {{ name }}"></div>{% endif %}
+          {% endif %}
+        </article>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+    </div>
+  </section>
+  </div>
+
+  {% if diagnostics %}
+  <div class="report-tab-panel" id="panel-diagnostics" role="tabpanel" aria-labelledby="tab-diagnostics">
+  <section class="kernels-section" style="margin-top:24px">
+    <h2 class="section-title">{{ labels.diagnostics }}</h2><p class="section-note">{{ labels.diagnostics_note }}</p>
+    {% if diagnostics|length > 1 %}
+    <label class="activation-label" for="activation-diagnostics-select">{{ labels.choose_activation }}</label>
+    <select class="activation-select" id="activation-diagnostics-select" data-activation-picker="activation-diagnostics-items">
+      {% for name in diagnostics %}<option value="{{ loop.index0 }}">{{ name }}</option>{% endfor %}
+    </select>
+    {% endif %}
+    <div id="activation-diagnostics-items">
+    {% for name, item in diagnostics.items() %}
+    <article class="diagnosis-card status-{{ item.status }}" data-activation-item="{{ loop.index0 }}">
+      <h3>{{ name }} (h={{ item.n_hidden }}) — {{ item.problem }}</h3>
+      <h4>{{ labels.observed_metrics }}</h4>
+      <ul class="diagnosis-evidence-list">{% for metric in item.evidence %}<li>{{ metric }}</li>{% endfor %}</ul>
+      <p><b>{{ labels.explanation }}:</b> {{ item.explanation }}</p>
+      <p><b>{{ labels.recommendation }}:</b> {{ item.recommendation }}</p>
+    </article>
+    {% endfor %}
+    </div>
+  </section>
+  </div>
+  {% endif %}
+
+  <div class="report-tab-panel" id="panel-audit" role="tabpanel" aria-labelledby="tab-audit">
+  <section class="kernels-section" style="margin-top:24px">
+    <h2 class="section-title">{{ labels.audit }}</h2><p class="section-note">{{ labels.audit_note }}</p>
+    <ul>
+      <li><a href="melm_feature_audit.csv">{{ labels.audit_all }}</a></li>
+      <li><a href="melm_feature_audit_selected.csv">{{ labels.audit_selected }}</a></li>
+    </ul>
+  </section>
+  </div>
+</div>
+<script>
+(() => {
+  const tabs = Array.from(document.querySelectorAll('.report-tab'));
+  const activate = (tab, focus = false) => {
+    tabs.forEach(item => {
+      const active = item === tab;
+      item.classList.toggle('is-active', active);
+      item.setAttribute('aria-selected', String(active));
+      item.tabIndex = active ? 0 : -1;
+      const panel = document.getElementById(item.getAttribute('aria-controls'));
+      panel.hidden = !active;
+      panel.classList.toggle('is-active', active);
+    });
+    if (focus) tab.focus();
+  };
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => activate(tab));
+    tab.addEventListener('keydown', event => {
+      let next = index;
+      if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+      else if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+      else if (event.key === 'Home') next = 0;
+      else if (event.key === 'End') next = tabs.length - 1;
+      else return;
+      event.preventDefault();
+      activate(tabs[next], true);
+    });
+  });
+  activate(tabs[0]);
+  document.querySelectorAll('[data-activation-picker]').forEach(select => {
+    const container = document.getElementById(select.dataset.activationPicker);
+    const items = Array.from(container.querySelectorAll('[data-activation-item]'));
+    const update = () => items.forEach(item => { item.hidden = item.dataset.activationItem !== select.value; });
+    select.addEventListener('change', update);
+    update();
+  });
+})();
+</script>
+</body></html>
